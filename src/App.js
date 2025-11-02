@@ -13,26 +13,26 @@ export default function App() {
       <section className="three-gs-section">
         <div className="three-gs-content">
           <h2>DE DRIE G'S VAN</h2>
-          <h3>BROWNIES&DOWNIES</h3>
+          <h3>Speciaalzaak</h3>
           
           <div className="g-item">
-            <h4>GASTVRIJHEID</h4>
+            <h4>GLIMLACH</h4>
             <p>
-              Wij kunnen geen dag zonder mensen om ons heen. Elk bezoek aan ons betekent ook een bezoekje aan onze medewerkers betekent liefdevlle bediening.
+              Iedere gast begroeten we met een glimlach. Een vriendelijk woord of kleine attentie maakt elk bezoek bijzonder.
             </p>
           </div>
           
           <div className="g-item">
-            <h4>GENIETEN</h4>
+            <h4>GEZELLIGHEID</h4>
             <p>
-              Het goed eten en drinken en de zon aangename sfeer zorgen voor een onvergetelijke lunch, borrel en taart ervaring met elkaar.
+              Samen genieten in een warme en uitnodigende omgeving. Van koffie tot een uitgebreide lunch, bij ons voelt iedereen zich thuis.
             </p>
           </div>
           
           <div className="g-item">
-            <h4>GROEIEND</h4>
+            <h4>GEDREVEN</h4>
             <p>
-              Elke dag een beetje beter worden. Het beste uit elkaar halen, oplossingen zelf bij de klanten. Dat maakt Brownies & Downies uniek!
+              We streven ernaar elke dag beter te worden. Met passie en inzet zorgen we voor bijzondere momenten en tevreden gasten.
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function App() {
         <div className="three-gs-image">
           <img
             src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80"
-            alt="Brownies&Downies medewerkers"
+            alt="Speciaalzaak medewerkers"
           />
         </div>
       </section>
