@@ -6,7 +6,6 @@ export default function App() {
     <div className="app-container">
       {/* Hero Section */}
       <header className="hero-section">
-        <h1>De Speciaalzaak Style Dummy Page</h1>
       </header>
 
        {/* Section 1 - Three G's */}
