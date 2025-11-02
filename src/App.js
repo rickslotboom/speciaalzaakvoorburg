@@ -12,34 +12,45 @@ export default function App() {
        {/* Section 1 - Three G's */}
       <section className="three-gs-section">
         <div className="three-gs-content">
-          <h2>DE DRIE G'S VAN</h2>
-          <h3>Speciaalzaak</h3>
+          <h2>WIE ZIJN WIJ?</h2>
+          <h3>
+            De Speciaalzaak is een hecht familie-initiatief waarin ieders talent samenkomt.
+          </h3>
           
           <div className="g-item">
-            <h4>GLIMLACH</h4>
             <p>
-              Iedere gast begroeten we met een glimlach. Een vriendelijk woord of kleine attentie maakt elk bezoek bijzonder.
+              Merel en Khushbu hadden al lange tijd de wens om samen een eigen onderneming te
+              starten. Ria wilde graag een warme en betekenisvolle plek creëren voor mensen met een
+              verstandelijke beperking. Zo ontstond Dagbesteding De Speciaalzaak.
             </p>
           </div>
           
           <div className="g-item">
-            <h4>GEZELLIGHEID</h4>
             <p>
-              Samen genieten in een warme en uitnodigende omgeving. Van koffie tot een uitgebreide lunch, bij ons voelt iedereen zich thuis.
+              Frank begeleidt al jarenlang mensen met een beperking en zet zijn kennis en betrokkenheid
+              voort binnen De Speciaalzaak. Rick is verantwoordelijk voor de ICT en zorgt dat alles achter
+              de schermen soepel verloopt.
             </p>
           </div>
-          
-          <div className="g-item">
-            <h4>GEDREVEN</h4>
+
+        <div className="g-item">
             <p>
-              We streven ernaar elke dag beter te worden. Met passie en inzet zorgen we voor bijzondere momenten en tevreden gasten.
+              De eerste deelnemer in de dagbesteding is Niek. Niek heeft een bijzonder talent om mensen
+              te raken en te verwonderen. Binnen De Speciaalzaak krijgt hij de ruimte om zijn kwaliteiten
+              verder te ontwikkelen.
+
+              Bij De Speciaalzaak wordt gekeken naar wat iemand wél kan, in plaats van naar wat iemand
+              niet kan.
             </p>
           </div>
-        </div>
+     </div>
+
+
+        
         
         <div className="three-gs-image">
           <img
-            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=800&q=80"
+            src="https://images.unsplash.com/photo-1762092259684-60f2b81f6ccd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=735"
             alt="Speciaalzaak medewerkers"
           />
         </div>
