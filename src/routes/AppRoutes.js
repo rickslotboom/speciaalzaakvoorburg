@@ -5,9 +5,6 @@ import Taarten from "./pages/Taarten";
 import "./App.css";
 
 export default function App() {
-  console.log("Home:", Home);
-  console.log("Taarten:", Taarten);
-
   return (
     <BrowserRouter>
       <Routes>

@@ -144,3 +144,123 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ====== Taarten Pagina ====== */
+.taarten-page {
+  background-color: #fffaf4;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+/* Hero met overlay */
+.taarten-hero {
+  background-size: cover;
+  background-position: center;
+  min-height: 55vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.taarten-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  line-height: 1.6;
+  color: #f2f2f2;
+}
+
+/* ====== Taarten Tegels ====== */
+.taarten-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Material UI achtige tegels */
+.taart-tile {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.taart-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* afbeelding-wrapper zodat beeld netjes schaalt */
+.taart-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background-color: #f5ede5;
+}
+
+.taart-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.taart-tile:hover img {
+  transform: scale(1.05);
+}
+
+/* info-onderdeel */
+.taart-info {
+  padding: 1.2rem 1.4rem 1.6rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.taart-info h3 {
+  color: #b45b3e;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.taart-info p {
+  color: #5c4033;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+}
