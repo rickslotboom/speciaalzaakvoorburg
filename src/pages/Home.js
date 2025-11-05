@@ -64,16 +64,16 @@ export default function Home() {
           </div>
         </Link>
 
-        <div className="card">
+        <Link to="/menu" className="card">
           <img
-            src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
-            alt="Heerlijke gerechten"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7UEy1gvVCIaUDPFMxgY2Zbd-bF-JeGWRqZA&s"
+            alt="Onze Keuken"
           />
           <div className="card-content">
-            <h3>HEERLIJKE GERECHTEN</h3>
-            <p>Geniet van verse, smaakvolle gerechten met een glimlach.</p>
+            <h3>ONZE KEUKEN</h3>
+            <p>Bijna alles wat we serveren maken we zelf —met seizoensproducten en ingrediënten van dichtbij.</p>
           </div>
-        </div>
+        </Link>
 
         <div className="card">
           <img

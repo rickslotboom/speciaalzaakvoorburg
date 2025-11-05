@@ -264,3 +264,92 @@
     font-size: 2rem;
   }
 }
+
+.menukaart-page {
+  background-color: #fffaf4;
+  color: #3b2c24;
+  font-family: "Arial", sans-serif;
+}
+
+/* Hero Section */
+.menukaart-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.menukaart-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.menukaart-overlay {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  color: #fff;
+  padding: 3rem 2rem;
+}
+
+.menukaart-overlay h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.menukaart-overlay p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f2f2f2;
+  margin-bottom: 1rem;
+}
+
+/* Menukaart Preview Section */
+.menukaart-preview {
+  max-width: 900px;
+  margin: 4rem auto;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.menukaart-preview h2 {
+  color: #b45b3e;
+  margin-bottom: 0.8rem;
+}
+
+.menukaart-preview p {
+  color: #5c4033;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Placeholder image */
+.menu-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5ede5;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-placeholder img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+}
+
+.menu-placeholder:hover {
+  transform: scale(1.02);
+}
