@@ -75,16 +75,16 @@ export default function Home() {
           </div>
         </Link>
 
-        <div className="card">
+        <Link to="/medewerkers" className="card">
           <img
-            src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=800&q=80"
-            alt="Samenwerken"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS7cyHrJfm5lAfyCn0jCflZflaCfAVdOHb7g&s"
+            alt="Onze Medewerkers"
           />
           <div className="card-content">
-            <h3>SAMENWERKEN</h3>
-            <p>Bij De Speciaalzaak werkt een bijzonder team samen met passie.</p>
+            <h3>ONZE MEDEWERKERS</h3>
+            <p>Bij De Speciaalzaak draait alles om mensen. Ontdek ons bijzondere team!</p>
           </div>
-        </div>
+        </Link>
       </section>
     </div>
   );

@@ -353,3 +353,58 @@
 .menu-placeholder:hover {
   transform: scale(1.02);
 }
+
+.medewerker-detail-page {
+  background-color: #fffaf4;
+  color: #3b2c24;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+/* Hero-sectie netjes centreren */
+.detail-hero {
+  background: linear-gradient(135deg, #a85b38, #8b3a25);
+  color: white;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.detail-hero .hero-overlay {
+  max-width: 800px;
+}
+
+.detail-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.detail-hero p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #f2f2f2;
+}
+
+/* Foto onder hero */
+.detail-photo {
+  padding: 3rem 1rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-photo img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+}
+
+.detail-photo h3 {
+  font-size: 1.4rem;
+  color: #b45b3e;
+}
