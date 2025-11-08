@@ -243,7 +243,11 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+
+.taart-info > p {
+  flex-grow: 1; /* Beschrijving vult de ruimte */
+  margin-bottom: 0.5rem;
 }
 
 .taart-info h3 {
@@ -407,4 +411,148 @@
 .detail-photo h3 {
   font-size: 1.4rem;
   color: #b45b3e;
+}
+
+/* ====== Evenementen Kalender ====== */
+.evenementen-kalender {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.evenementen-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  color: #b45b3e;
+}
+
+.evenementen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.event-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.event-date-badge {
+  background: linear-gradient(135deg, #b45b3e, #8b3a25);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.date-day {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.date-month {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.date-year {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 3px;
+}
+
+.event-content {
+  padding: 25px;
+}
+
+.event-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #b45b3e;
+  font-weight: 600;
+}
+
+.event-detail {
+  margin-bottom: 10px;
+  color: #5c4033;
+  font-size: 0.95rem;
+}
+
+.event-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.event-button {
+  background: linear-gradient(135deg, #b45b3e, #8b3a25);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.event-button:hover {
+  background: linear-gradient(135deg, #8b3a25, #6d2819);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .evenementen-title {
+    font-size: 2rem;
+  }
+  
+  .evenementen-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====== Ingrediënten Styling ====== */
+.taart-ingredienten {
+  margin-top: auto; /* Duwt ingrediënten naar beneden */
+  padding: 1rem;
+  background: linear-gradient(135deg, #f5ede5 0%, #faf7f2 100%);
+  border-left: 3px solid #b45b3e;
+  border-radius: 8px;
+}
+
+.taart-ingredienten h4 {
+  color: #8b3a25;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.taart-ingredienten p {
+  color: #5c4033;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Hover effect voor ingrediënten */
+.taart-tile:hover .taart-ingredienten {
+  background: linear-gradient(135deg, #f0e5dc 0%, #f5ede5 100%);
+  border-left-color: #8b3a25;
+  transition: all 0.3s ease;
 }

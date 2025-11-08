@@ -66,7 +66,7 @@ export default function Home() {
 
         <Link to="/menu" className="card">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7UEy1gvVCIaUDPFMxgY2Zbd-bF-JeGWRqZA&s"
+            src="https://images.unsplash.com/photo-1762614482251-c5781670753a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687"
             alt="Onze Keuken"
           />
           <div className="card-content">
@@ -77,12 +77,23 @@ export default function Home() {
 
         <Link to="/medewerkers" className="card">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS7cyHrJfm5lAfyCn0jCflZflaCfAVdOHb7g&s"
+            src="https://images.unsplash.com/photo-1762614279942-6e0a5e68dba6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687"
             alt="Onze Medewerkers"
           />
           <div className="card-content">
             <h3>ONZE MEDEWERKERS</h3>
             <p>Bij De Speciaalzaak draait alles om mensen. Ontdek ons bijzondere team!</p>
+          </div>
+        </Link>
+
+        <Link to="/evenementen" className="card">
+          <img
+            src="https://images.unsplash.com/photo-1762613405932-808f609fee2a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
+            alt="Onze Evenementen"
+          />
+          <div className="card-content">
+            <h3>ONZE EVENEMENTEN</h3>
+            <p>Vier jouw moment bij ons! Van babyshowers tot borrels — onze lunchroom is te huur voor jouw speciale gelegenheid.</p>
           </div>
         </Link>
       </section>

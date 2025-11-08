@@ -5,6 +5,7 @@ import Taarten from "./pages/Taarten";
 import Menu from "./pages/Menu";
 import Medewerkers from "./pages/Medewerkers";
 import MedewerkerDetail from "./pages/MedewerkerDetail";
+import Evenementen from "./pages/Evenementen";
 import "./App.css";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/medewerkers" element={<Medewerkers/>} />
         <Route path="/medewerkers/:id" element={<MedewerkerDetail />} />
+        <Route path="/evenementen" element={<Evenementen />} />
       </Routes>
     </BrowserRouter>
   );
