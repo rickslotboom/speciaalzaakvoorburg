@@ -35,27 +35,24 @@ export default function Evenementen() {
           <div className="event-card">
             {/* Datum Badge */}
             <div className="event-date-badge">
-              <div className="date-day">9</div>
-              <div className="date-month">december</div>
-              <div className="date-year">2025</div>
+              <div className="date-day"></div>
+              <div className="date-month"></div>
+              <div className="date-year"></div>
             </div>
             
             {/* Event Details */}
             <div className="event-content">
               <h3 className="event-title">
-                ☕ Barista Workshop voor Leerkrachten
+                Er zijn nog geen evenementen
               </h3>
               
               <div className="event-detail">
-                <strong>📅 Tijd:</strong> Dinsdag, 9 december
               </div>
               
               <div className="event-detail">
-                <strong>👥 Doelgroep:</strong> Leerkrachten
               </div>
               
               <p className="event-description">
-                Leer de fijne kneepjes van het barista-vak tijdens deze inspirerende workshop speciaal voor leerkrachten.
               </p>
              
             </div>
