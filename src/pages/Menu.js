@@ -12,7 +12,7 @@ export default function Menu() {
         className="menukaart-hero"
         style={{
           backgroundImage:
-            "url('https://source.unsplash.com/1600x900/?coffee,brunch,bakery,lunch,restaurant')",
+            "url('https://source.unsplash.com/16-x9-/?coffee,brunch,bakery,lunch,restaurant')",
         }}
       >
         <div className="menukaart-overlay">
@@ -61,7 +61,7 @@ export default function Menu() {
               <li><span>Yoghurt met fruit & granola</span><span>8,-</span></li>
               <p>Romige yoghurt met huisgemaakte granola en seizoensfruit.</p>
 
-              <li><span>Verse jus d'orange</span><span>5,00</span></li>
+              <li><span>Verse jus d'orange</span><span>5,-</span></li>
               <li><span>Smoothie van de dag</span><span>6,50</span></li>
             </ul>
           </div>
@@ -154,11 +154,11 @@ export default function Menu() {
             <div className="menu-card">
               <h2>Koffie & Specials</h2>
               <ul>
-                <li><span>Koffie</span><span>3,00</span></li>
-                <li><span>Espresso</span><span>3,00</span></li>
-                <li><span>Dubbele Espresso</span><span>4,00</span></li>
+                <li><span>Koffie</span><span>3,-</span></li>
+                <li><span>Espresso</span><span>3,-</span></li>
+                <li><span>Dubbele Espresso</span><span>4,-</span></li>
                 <li><span>Cappuccino</span><span>3,50</span></li>
-                <li><span>Latte macchiato</span><span>4,00</span></li>
+                <li><span>Latte macchiato</span><span>4,-</span></li>
                 <li><span>Flat white</span><span>4,50</span></li>
               </ul>
               <p>Plantaardige melk (Haver-, soja- of kokosmelk) +0,75</p>
@@ -170,21 +170,21 @@ export default function Menu() {
                 <li><span>Biologische thee</span><span>3,50</span></li>
                 <li><span>Verse munt thee </span><span>3,75</span></li>
                 <li><span>Verse gember thee </span><span>3,75</span></li>
-                <li><span>Potje thee </span><span>8,00</span></li>
-                <li><span>Warme chocolademelk met slagroom</span><span>4,00</span></li>
+                <li><span>Potje thee </span><span>8,-</span></li>
+                <li><span>Warme chocolademelk met slagroom</span><span>4,-</span></li>
               </ul>
             </div>
 
             <div className="menu-card">
               <h2>Koude Dranken</h2>
               <ul>
-                <li><span>Coca-Cola</span><span>3,00</span></li>
-                <li><span>Sprite</span><span>3,00</span></li>
-                <li><span>Fanta</span><span>3,00</span></li>
-                <li><span>Ice Tea Sparkling</span><span>3,00</span></li>
-                <li><span>Ginger-Ale</span><span>3,00</span></li>
-                <li><span>Tonic</span><span>3,00</span></li>
-                <li><span>Water plat/bruis</span><span>3,00</span></li>
+                <li><span>Coca-Cola</span><span>3,-</span></li>
+                <li><span>Sprite</span><span>3,-</span></li>
+                <li><span>Fanta</span><span>3,-</span></li>
+                <li><span>Ice Tea Sparkling</span><span>3,-</span></li>
+                <li><span>Ginger-Ale</span><span>3,-</span></li>
+                <li><span>Tonic</span><span>3,-</span></li>
+                <li><span>Water plat/bruis</span><span>3,-</span></li>
               </ul>
             </div>
 
@@ -192,9 +192,9 @@ export default function Menu() {
               <h2>Sap & Specials</h2>
               <ul>
                 <li><span>Biologische appelsap</span><span>3,50</span></li>
-                <li><span>Jus d'orange</span><span>5,00</span></li>
-                <li><span>Home made ice tea</span><span>4,00</span></li>
-                <li><span>Lassi (van de week)</span><span>4,00</span></li>
+                <li><span>Jus d'orange</span><span>5,-</span></li>
+                <li><span>Home made ice tea</span><span>4,-</span></li>
+                <li><span>Lassi (van de week)</span><span>4,-</span></li>
                 <li><span>Smoothie van de week</span><span>6,50</span></li>
               </ul>
             </div>
@@ -202,12 +202,12 @@ export default function Menu() {
             <div className="menu-card">
               <h2>Alcoholisch</h2>
               <ul>
-                <li><span>Rode Wijn</span><span>5,00</span></li>
-                <li><span>Witte Wijn</span><span>5,00</span></li>
-                <li><span>Rosé</span><span>5,00</span></li>
-                <li><span>Pilsje</span><span>4,00</span></li>
-                <li><span>Blond bier</span><span>5,00</span></li>
-                <li><span>Bock bier</span><span>5,00</span></li>
+                <li><span>Rode Wijn</span><span>5,-</span></li>
+                <li><span>Witte Wijn</span><span>5,-</span></li>
+                <li><span>Rosé</span><span>5,-</span></li>
+                <li><span>Pilsje</span><span>4,-</span></li>
+                <li><span>Blond bier</span><span>5,-</span></li>
+                <li><span>Bock bier</span><span>5,-</span></li>
               </ul>
             </div>
           </div>
