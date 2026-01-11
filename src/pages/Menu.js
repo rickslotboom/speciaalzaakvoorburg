@@ -1,7 +1,10 @@
-import React from "react";
 import "../App.css";
+import React, { useState } from "react";
 
 export default function Menu() {
+
+  const [activeTab, setActiveTab] = useState("eten");
+
   return (
     <div className="menukaart-page">
       {/* Hero */}
@@ -22,8 +25,25 @@ export default function Menu() {
         </div>
       </section>
 
+      {/* Tabs */}
+      <div className="menu-tabs">
+        <button
+          className={activeTab === "eten" ? "active" : ""}
+          onClick={() => setActiveTab("eten")}
+        >
+          🍽️ Eten
+        </button>
+        <button
+          className={activeTab === "dranken" ? "active" : ""}
+          onClick={() => setActiveTab("dranken")}
+        >
+          ☕ Dranken
+        </button>
+      </div>
+
       {/* Menukaart */}
       <section className="menukaart-section">
+        {activeTab === "eten" && (
         <div className="menu-grid">
           {/* Ontbijt */}
           <div className="menu-card">
@@ -41,14 +61,14 @@ export default function Menu() {
               <li><span>Yoghurt met fruit & granola</span><span>8,-</span></li>
               <p>Romige yoghurt met huisgemaakte granola en seizoensfruit.</p>
 
-              <li><span>Verse jus d’orange</span><span>5,00</span></li>
+              <li><span>Verse jus d'orange</span><span>5,00</span></li>
               <li><span>Smoothie van de dag</span><span>6,50</span></li>
             </ul>
           </div>
 
-          {/* Tosti & Panini’s */}
+          {/* Tosti & Panini's */}
           <div className="menu-card">
-            <h2>Tosti & Panini’s</h2>
+            <h2>Tosti & Panini's</h2>
             <ul>
               <li><span>Tosti Speciaalzaak</span><span>8,50</span></li>
               <p>Boerenkaas op vers vloerbrood, extra keuze uit ham, spek, tomaat, avocado of ui.</p>
@@ -120,10 +140,59 @@ export default function Menu() {
             </ul>
           </div>
         </div>
+        )}
+
+        {activeTab === "eten" && (
+          <p className="menu-footer">
+            * Keuze uit: Wit – Meergranen – Spelt – Glutenvrij of Italiaanse bol (wit, bruin, spelt).  
+            <br />Alle gerechten worden met liefde en aandacht bereid 💛
+          </p>
+        )}
+
+        {activeTab === "dranken" && (
+          <div className="menu-grid">
+            <div className="menu-card">
+              <h2>Koffie & Specials</h2>
+              <ul>
+                <li><span>Koffie / Espresso</span><span>3,00</span></li>
+                <li><span>Cappuccino</span><span>3,50</span></li>
+                <li><span>Latte macchiato</span><span>4,00</span></li>
+                <li><span>Flat white</span><span>4,50</span></li>
+              </ul>
+              <p>Plantaardige melk +0,75</p>
+            </div>
+
+            <div className="menu-card">
+              <h2>Thee & Warm</h2>
+              <ul>
+                <li><span>Biologische thee</span><span>3,50</span></li>
+                <li><span>Verse munt/gember</span><span>3,75</span></li>
+                <li><span>Warme chocolademelk</span><span>4,00</span></li>
+              </ul>
+            </div>
+
+            <div className="menu-card">
+              <h2>Koude Dranken</h2>
+              <ul>
+                <li><span>Frisdrank</span><span>3,00</span></li>
+                <li><span>Water plat/bruis</span><span>3,00</span></li>
+                <li><span>Kan water</span><span>4,00</span></li>
+              </ul>
+            </div>
+
+            <div className="menu-card">
+              <h2>Alcoholisch</h2>
+              <ul>
+                <li><span>Wijn / Cava</span><span>5,00</span></li>
+                <li><span>Pils</span><span>4,00</span></li>
+                <li><span>Speciaal bier</span><span>5,00</span></li>
+              </ul>
+            </div>
+          </div>
+        )}
 
         <p className="menu-footer">
-          * Keuze uit: Wit – Meergranen – Spelt – Glutenvrij of Italiaanse bol (wit, bruin, spelt).  
-          <br />Alle gerechten worden met liefde en aandacht bereid 💛
+          Alles wordt met liefde en aandacht bereid 💛
         </p>
       </section>
     </div>

@@ -681,4 +681,30 @@
   font-size: 0.95rem;
 }
 
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.menu-tabs button {
+  padding: 0.75rem 2rem;
+  border: none;
+  background: #eee;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.menu-tabs button.active {
+  background: #6b4f3f;
+  color: white;
+}
+
+.menu-tabs button:hover {
+  background: #d6c3b5;
+}
+
 
