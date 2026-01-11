@@ -125,6 +125,27 @@
   font-size: 0.95rem;
 }
 
+/* Contact Section */
+.contact-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f5ede5 0%, #faf7f2 100%);
+  text-align: center;
+  border-top: 3px solid #b45b3e;
+}
+
+.contact-content h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #b45b3e;
+}
+
+.contact-details p {
+  font-size: 1.15rem;
+  margin: 0.75rem 0;
+  color: #5c4033;
+  font-weight: 500;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-section h1 {
@@ -142,6 +163,14 @@
 
   .cards-section {
     grid-template-columns: 1fr;
+  }
+
+  .contact-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-details p {
+    font-size: 1rem;
   }
 }
 
@@ -706,5 +735,3 @@
 .menu-tabs button:hover {
   background: #d6c3b5;
 }
-
-

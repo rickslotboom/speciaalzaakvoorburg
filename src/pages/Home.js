@@ -97,6 +97,18 @@ export default function Home() {
           </div>
         </Link>
       </section>
+
+      {/* Contact Section */}
+      <section className="contact-section">
+        <div className="contact-content">
+          <h3>Bezoek Ons</h3>
+          <div className="contact-details">
+            <p>Herenstraat 16</p>
+            <p>2271 CG Voorburg</p>
+            <p>Tel: 06 81698345</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
