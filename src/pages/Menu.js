@@ -154,38 +154,60 @@ export default function Menu() {
             <div className="menu-card">
               <h2>Koffie & Specials</h2>
               <ul>
-                <li><span>Koffie / Espresso</span><span>3,00</span></li>
+                <li><span>Koffie</span><span>3,00</span></li>
+                <li><span>Espresso</span><span>3,00</span></li>
+                <li><span>Dubbele Espresso</span><span>4,00</span></li>
                 <li><span>Cappuccino</span><span>3,50</span></li>
                 <li><span>Latte macchiato</span><span>4,00</span></li>
                 <li><span>Flat white</span><span>4,50</span></li>
               </ul>
-              <p>Plantaardige melk +0,75</p>
+              <p>Plantaardige melk (Haver-, soja- of kokosmelk) +0,75</p>
             </div>
 
             <div className="menu-card">
               <h2>Thee & Warm</h2>
               <ul>
                 <li><span>Biologische thee</span><span>3,50</span></li>
-                <li><span>Verse munt/gember</span><span>3,75</span></li>
-                <li><span>Warme chocolademelk</span><span>4,00</span></li>
+                <li><span>Verse munt thee </span><span>3,75</span></li>
+                <li><span>Verse gember thee </span><span>3,75</span></li>
+                <li><span>Potje thee </span><span>8,00</span></li>
+                <li><span>Warme chocolademelk met slagroom</span><span>4,00</span></li>
               </ul>
             </div>
 
             <div className="menu-card">
               <h2>Koude Dranken</h2>
               <ul>
-                <li><span>Frisdrank</span><span>3,00</span></li>
+                <li><span>Coca-Cola</span><span>3,00</span></li>
+                <li><span>Sprite</span><span>3,00</span></li>
+                <li><span>Fanta</span><span>3,00</span></li>
+                <li><span>Ice Tea Sparkling</span><span>3,00</span></li>
+                <li><span>Ginger-Ale</span><span>3,00</span></li>
+                <li><span>Tonic</span><span>3,00</span></li>
                 <li><span>Water plat/bruis</span><span>3,00</span></li>
-                <li><span>Kan water</span><span>4,00</span></li>
+              </ul>
+            </div>
+
+            <div className="menu-card">
+              <h2>Sap & Specials</h2>
+              <ul>
+                <li><span>Biologische appelsap</span><span>3,50</span></li>
+                <li><span>Jus d'orange</span><span>5,00</span></li>
+                <li><span>Home made ice tea</span><span>4,00</span></li>
+                <li><span>Lassi (van de week)</span><span>4,00</span></li>
+                <li><span>Smoothie van de week</span><span>6,50</span></li>
               </ul>
             </div>
 
             <div className="menu-card">
               <h2>Alcoholisch</h2>
               <ul>
-                <li><span>Wijn / Cava</span><span>5,00</span></li>
-                <li><span>Pils</span><span>4,00</span></li>
-                <li><span>Speciaal bier</span><span>5,00</span></li>
+                <li><span>Rode Wijn</span><span>5,00</span></li>
+                <li><span>Witte Wijn</span><span>5,00</span></li>
+                <li><span>Rosé</span><span>5,00</span></li>
+                <li><span>Pilsje</span><span>4,00</span></li>
+                <li><span>Blond bier</span><span>5,00</span></li>
+                <li><span>Bock bier</span><span>5,00</span></li>
               </ul>
             </div>
           </div>
