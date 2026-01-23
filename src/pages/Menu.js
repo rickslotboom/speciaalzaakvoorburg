@@ -1,9 +1,8 @@
-import "../App.css";
 import React, { useState } from "react";
 
 export default function Menu() {
 
-  const [activeTab, setActiveTab] = useState("eten");
+  const [activeTab, setActiveTab] = useState("ontbijt");
 
   return (
     <div className="menukaart-page">
@@ -12,7 +11,7 @@ export default function Menu() {
         className="menukaart-hero"
         style={{
           backgroundImage:
-            "url('https://source.unsplash.com/16-x9-/?coffee,brunch,bakery,lunch,restaurant')",
+            "url('https://source.unsplash.com/1600x900/?coffee,brunch,bakery,lunch,restaurant')",
         }}
       >
         <div className="menukaart-overlay">
@@ -28,10 +27,16 @@ export default function Menu() {
       {/* Tabs */}
       <div className="menu-tabs">
         <button
-          className={activeTab === "eten" ? "active" : ""}
-          onClick={() => setActiveTab("eten")}
+          className={activeTab === "ontbijt" ? "active" : ""}
+          onClick={() => setActiveTab("ontbijt")}
         >
-          🍽️ Eten
+          🍳 Ontbijt
+        </button>
+        <button
+          className={activeTab === "lunch" ? "active" : ""}
+          onClick={() => setActiveTab("lunch")}
+        >
+          🍽️ Lunch
         </button>
         <button
           className={activeTab === "dranken" ? "active" : ""}
@@ -43,171 +48,274 @@ export default function Menu() {
 
       {/* Menukaart */}
       <section className="menukaart-section">
-        {activeTab === "eten" && (
+        {activeTab === "ontbijt" && (
         <div className="menu-grid">
           {/* Ontbijt */}
           <div className="menu-card">
-            <h2>Ontbijt / Start van de dag</h2>
+            <h2>Ontbijt (Tot 12)</h2>
             <ul>
-              <li><span>Ontbijtplankje Speciaal</span><span>15,-</span></li>
-              <p>Vers brood naar keuze met huisgemaakte jam, kaas, ham, eitje, yoghurt met granola, jus en koffie/thee.</p>
+              <li><span>Roomboter Croissant</span><span>2,5</span></li>
+              <p>Met huisgemaakte Jam & Boter</p>
+              <p style={{fontWeight: '600', marginTop: '0.8rem', marginBottom: '0.3rem'}}>Extra's:</p>
+              <p style={{marginLeft: '1rem', margin: '0.2rem 0 0.2rem 1rem'}}>Kaas 1</p>
+              <p style={{marginLeft: '1rem', margin: '0.2rem 0 0.2rem 1rem'}}>Gebakken Ei 2</p>
 
-              <li><span>Lekker eitje als ontbijtje</span><span>11,-</span></li>
-              <p>Scrambled, omelet of spiegelei met kaas, ham of spek. Met brood naar keuze.</p>
+              <li><span>Griekse Yoghurt</span><span>8,5</span></li>
+              <p>Met huisgemaakte Granola, Vers Fruit & Honing</p>
 
-              <li><span>Pannenkoeken</span><span>8,-</span></li>
-              <p>Kies: Nutella, kaas, spek, stroop of roomboter met poedersuiker.</p>
+              <li><span>Uitsmijter</span><span>9,5</span></li>
+              <p>3 eieren op twee broodjes met Kaas & Ham</p>
 
-              <li><span>Yoghurt met fruit & granola</span><span>8,-</span></li>
-              <p>Romige yoghurt met huisgemaakte granola en seizoensfruit.</p>
-
-              <li><span>Verse jus d'orange</span><span>5,-</span></li>
-              <li><span>Smoothie van de dag</span><span>6,50</span></li>
+              <li><span>English Breakfast</span><span>12</span></li>
+              <p>Toast met ei, ham, spek, champignons, bonen in tomatensaus & worst</p>
             </ul>
           </div>
 
-          {/* Tosti & Panini's */}
+          {/* Tosti */}
           <div className="menu-card">
-            <h2>Tosti & Panini's</h2>
+            <h2>Tosti</h2>
+            <p style={{textAlign: 'center', fontStyle: 'italic', marginBottom: '1.5rem'}}>Stel je eigen Tosti samen<br/>Precies hoe jij hem lekker vindt!</p>
             <ul>
-              <li><span>Tosti Speciaalzaak</span><span>8,50</span></li>
-              <p>Boerenkaas op vers vloerbrood, extra keuze uit ham, spek, tomaat, avocado of ui.</p>
-
-              <li><span>Panini Caprése</span><span>8,50</span></li>
-              <p>Mozzarella, pesto, kappertjes, tomaat en pestomayonaise.</p>
-
-              <li><span>Panini Brie</span><span>8,50</span></li>
-              <p>Brie, spek, vijgenjam en pecannoten — zacht en romig.</p>
-            </ul>
-          </div>
-
-          {/* Soepen */}
-          <div className="menu-card">
-            <h2>Soepen</h2>
-            <ul>
-              <li><span>Tomatensoep</span><span>8,-</span></li>
-              <p>Met mascarpone, brood, knoflookboter en humus.</p>
-
-              <li><span>Soep van de dag</span><span>8,-</span></li>
-              <p>Vraag ons team wat er vandaag op het vuur staat.</p>
-            </ul>
-          </div>
-
-          {/* Salades */}
-          <div className="menu-card">
-            <h2>Salades</h2>
-            <ul>
-              <li><span>Poké Bowl van Merel</span><span>€14,-</span></li>
-              <p>Kip, paprika, maïs, avocado, edamame, mango en soja-wasabi dressing.</p>
-
-              <li><span>Tonijnsalade Speciaalzaak</span><span>€14,-</span></li>
-              <p>Tonijn, paprika, appel, walnoot, tomaat, ui, komkommer en basilicumdressing.</p>
-            </ul>
-          </div>
-
-          {/* Warme Lunch */}
-          <div className="menu-card">
-            <h2>Warme Lunch</h2>
-            <ul>
-              <li><span>Bordje Ongezond</span><span>8,-</span></li>
-              <p>Eén huisgemaakte kroket (vega of kip) met frites of brood naar keuze. Wil je
-              twee kroketten dan betaal je 12,-</p>
-
-              <li><span>Broodje Bal</span><span>8,-</span></li>
-              <p>Heerlijke ouderwetse huisgemaakte Bal gehakt uit de Jus. Wil je twee van die
-              overheerlijke ballen dan betaal je 12,-</p>
-
-              <li><span>Een ei hoort erbij</span><span>11,-</span></li>
-              <p>Scrambled, omelet of spiegelei met kaas, ham of spek op brood naar keuze.</p>
-
-              <li><span>Kip cashew speciaal</span><span>€13,-</span></li>
-              <p>Kipfilet met ketjap, honing, paprika, cashewnoten en srirachamayonaise.</p>
-            </ul>
-          </div>
-
-          {/* Koude Lunch */}
-          <div className="menu-card">
-            <h2>Koude Lunch</h2>
-            <ul>
-              <li><span>Pittige tonijn</span><span>11,-</span></li>
-              <p>Italiaanse bol met tonijn, jalapeño, roomkaas, cheddar en pittige dressing.</p>
-
-              <li><span>Het gezonde broodje</span><span>11,-</span></li>
-              <p>Kaas, tomaat, humus, ei en mayonaise op Italiaanse bol.</p>
-
-              <li><span>Heerlijke Bagel</span><span>10,-</span></li>
-              <p>Bagel met avocado, feta, geroosterde tomaat en knoflookchampignons.</p>
+              <li><span>Tosti Kaas</span><span>5</span></li>
+              <p>Met Ketchup</p>
+              <p>Keuze uit: wit of bruin brood</p>
+              <p style={{fontWeight: '600', marginTop: '0.8rem', marginBottom: '0.3rem'}}>Extra's:</p>
+              <p style={{marginLeft: '1rem', margin: '0.2rem 0 0.2rem 1rem'}}>Tomaat 0,5</p>
+              <p style={{marginLeft: '1rem', margin: '0.2rem 0 0.2rem 1rem'}}>Ham 1</p>
+              <p style={{marginLeft: '1rem', margin: '0.2rem 0 0.2rem 1rem'}}>Spek 1</p>
+              <p style={{marginLeft: '1rem', margin: '0.2rem 0 0.2rem 1rem'}}>Gecarameliseerde Ui 1</p>
+              <p style={{marginLeft: '1rem', margin: '0.2rem 0 0.2rem 1rem'}}>Avocado 1</p>
+              <p style={{marginLeft: '1rem', margin: '0.2rem 0 0.2rem 1rem'}}>Gebakken Ei 2</p>
             </ul>
           </div>
         </div>
         )}
 
-        {activeTab === "eten" && (
-          <p className="menu-footer">
-            * Keuze uit: Wit – Meergranen – Spelt – Glutenvrij of Italiaanse bol (wit, bruin, spelt).  
-            <br />Alle gerechten worden met liefde en aandacht bereid 💛
-          </p>
-        )}
+        
+{activeTab === "lunch" && (
+  <div className="menu-grid">
+
+    {/* Lunch */}
+    <div className="menu-card">
+      <h2>Lunch</h2>
+      <ul>
+        <li><span>Soep van de dag</span><span>8</span></li>
+        <p>Met brood en huisgemaakte kruidenboter.</p>
+
+        <li><span>Pokebowl salade</span><span>12,5</span></li>
+        <p>Met mais, wortel, avocado, rodekool, edamame, mango, wasabi-soja dressing. Keuze uit kip of tonijn.</p>
+      </ul>
+    </div>
+
+    {/* Broodjes */}
+    <div className="menu-card">
+      <h2>Broodjes</h2>
+      <ul>
+        <li><span>Broodje Bal Jordaan (warm)</span><span>10</span></li>
+        <p>Met coleslaw & mosterdmayonaise.</p>
+
+        <li><span>Broodje Beenham (warm)</span><span>10</span></li>
+        <p>Met rucola en honingmosterd.</p>
+
+        <li><span>De Bagel (lauw/warm)</span><span>10</span></li>
+        <p>Met avocado, knoflookchampignons, cherrytomaatjes, feta & srirachamayo.</p>
+
+        <li><span>Tonijnsalade (koud)</span><span>10</span></li>
+        <p>Met rucola, appel, augurk, lente ui & mayonaise.</p>
+
+        <li><span>Filet American Speciaal (koud)</span><span>10</span></li>
+        <p>Met rucola, ei, parmezaan & truffelmayo.</p>
+      </ul>
+    </div>
+
+    {/* Lekkere Trek */}
+    <div className="menu-card">
+      <h2>Lekkere trek</h2>
+      <ul>
+        <li><span>Frietjes</span><span>4,5</span></li>
+        <p>Met mayonaise.</p>
+
+        <li><span>Frietje Parmezaan</span><span>6</span></li>
+        <p>Met lente ui & truffelmayo.</p>
+
+        <li><span>Loaded Fries</span><span>9</span></li>
+        <p>Met kip, mais, lente ui, kaas & mayonaise.</p>
+      </ul>
+    </div>
+
+  </div>
+)}
+
+
+    
 
         {activeTab === "dranken" && (
           <div className="menu-grid">
             <div className="menu-card">
-              <h2>Koffie & Specials</h2>
+              <h2>Warme Dranken</h2>
+              <h3
+  style={{
+    fontSize: '1.3rem',
+    color: '#5c4033',
+    marginTop: '1.5rem',
+    marginBottom: '0.8rem',
+    textDecoration: 'underline',
+    textUnderlineOffset: '4px'
+  }}
+>
+  Koffie
+</h3>
               <ul>
-                <li><span>Koffie</span><span>3,-</span></li>
-                <li><span>Espresso</span><span>3,-</span></li>
-                <li><span>Dubbele Espresso</span><span>4,-</span></li>
-                <li><span>Cappuccino</span><span>3,50</span></li>
-                <li><span>Latte macchiato</span><span>4,-</span></li>
-                <li><span>Flat white</span><span>4,50</span></li>
+                <li><span>Koffie</span><span>3</span></li>
+                <li><span>Espresso</span><span>3</span></li>
+                <li><span>Cappuccino</span><span>3,5</span></li>
+                <li><span>Sterke Cappuccino</span><span>3,5</span></li>
+                <li><span>Koffie Verkeerd</span><span>3,5</span></li>
+                <li><span>Latte Macchiato</span><span>4</span></li>
               </ul>
-              <p>Plantaardige melk (Haver-, soja- of kokosmelk) +0,75</p>
+              <p style={{fontWeight: '600', marginTop: '0.8rem', marginBottom: '0.3rem'}}>Alternatieve Melk?</p>
+              <p style={{marginLeft: '1rem', margin: '0.2rem 0 0.2rem 1rem'}}>Havermelk 0,5</p>
+              <p style={{marginLeft: '1rem', margin: '0.2rem 0 0.2rem 1rem'}}>Kokosmelk 0,5</p>
+
+
+              <h3
+  style={{
+    fontSize: '1.3rem',
+    color: '#5c4033',
+    marginTop: '1.5rem',
+    marginBottom: '0.8rem',
+    textDecoration: 'underline',
+    textUnderlineOffset: '4px'
+  }}
+>
+  Thee
+</h3>
+              <ul>
+                <li><span>Thee (Losse Thee)</span><span>3</span></li>
+                <li><span>Verse Gemberthee</span><span>3,5</span></li>
+                <li><span>Verse Muntthee</span><span>3,5</span></li>
+                <li><span>Pot Thee</span><span>6,5</span></li>
+              </ul>
+<h3
+  style={{
+    fontSize: '1.3rem',
+    color: '#5c4033',
+    marginTop: '1.5rem',
+    marginBottom: '0.8rem',
+    textDecoration: 'underline',
+    textUnderlineOffset: '4px'
+  }}
+>
+ Choco
+</h3>
+              <ul>
+                <li><span>Warme Chocomel</span><span>4</span></li>
+              </ul>
+              <p style={{fontSize: '0.85rem'}}>Met slagroom + 0,5</p>
             </div>
 
             <div className="menu-card">
-              <h2>Thee & Warm</h2>
+              <h2>Taart</h2>
               <ul>
-                <li><span>Biologische thee</span><span>3,50</span></li>
-                <li><span>Verse munt thee </span><span>3,75</span></li>
-                <li><span>Verse gember thee </span><span>3,75</span></li>
-                <li><span>Potje thee </span><span>8,-</span></li>
-                <li><span>Warme chocolademelk met slagroom</span><span>4,-</span></li>
+                <li><span>Taart</span><span>4,5</span></li>
+                <p>Taarten vers gebakken uit eigen oven door onze patissier Khushbu</p>
+                <p style={{fontSize: '0.85rem'}}>Met slagroom + 0,5</p>
+
+                <li><span>Chocoladetaart</span><span>5,5</span></li>
+                <p>Met framboos</p>
+
+                <li><span>Appeltaart</span><span>5,5</span></li>
+                <p>Met cranberries</p>
+
+                <li><span>Opera Cake</span><span>5,5</span></li>
+                <p>Met koffie en chocola</p>
+
+                <li><span>Carrotcake</span><span>5,5</span></li>
+                <p>Met creamcheese</p>
               </ul>
             </div>
 
             <div className="menu-card">
-              <h2>Koude Dranken</h2>
-              <ul>
-                <li><span>Coca-Cola</span><span>3,-</span></li>
-                <li><span>Sprite</span><span>3,-</span></li>
-                <li><span>Fanta</span><span>3,-</span></li>
-                <li><span>Ice Tea Sparkling</span><span>3,-</span></li>
-                <li><span>Ginger-Ale</span><span>3,-</span></li>
-                <li><span>Tonic</span><span>3,-</span></li>
-                <li><span>Water plat/bruis</span><span>3,-</span></li>
-              </ul>
-            </div>
+              <h2>Koude dranken</h2>
+
+    <h3
+  style={{
+    fontSize: '1.3rem',
+    color: '#5c4033',
+    marginTop: '1.5rem',
+    marginBottom: '0.8rem',
+    textDecoration: 'underline',
+    textUnderlineOffset: '4px'
+  }}
+>
+  Soda's 
+</h3>
+    <ul>
+      <li><span>Coca-Cola / Coca-Cola Zero</span><span>3</span></li>
+      <li><span>Fanta Orange</span><span>3</span></li>
+      <li><span>Fanta Cassis</span><span>3</span></li>
+      <li><span>Fuzetea Sparkling Lemon</span><span>3</span></li>
+      <li><span>Sprite Zero</span><span>3</span></li>
+      <li><span>Tonic</span><span>3</span></li>
+      <li><span>Ginger Ale</span><span>3</span></li>
+      <li><span>Chaudfontaine rood/blauw</span><span>3</span></li>
+      <li><span>Karaf tapwater</span><span>4</span></li>
+    </ul>
+
+    <h3
+  style={{
+    fontSize: '1.3rem',
+    color: '#5c4033',
+    marginTop: '1.5rem',
+    marginBottom: '0.8rem',
+    textDecoration: 'underline',
+    textUnderlineOffset: '4px'
+  }}
+>
+  Homemade
+</h3>
+    <ul>
+      <li><span>Homemade iced tea</span><span>4</span></li>
+    </ul>
+
+    <h3
+  style={{
+    fontSize: '1.3rem',
+    color: '#5c4033',
+    marginTop: '1.5rem',
+    marginBottom: '0.8rem',
+    textDecoration: 'underline',
+    textUnderlineOffset: '4px'
+  }}
+>
+  Sapjes
+</h3>
+    <ul>
+      <li><span>Appelsap</span><span>4</span></li>
+      <li><span>Vers geperste sinaasappelsap</span><span>5</span></li>
+    </ul>
+  </div>
 
             <div className="menu-card">
-              <h2>Sap & Specials</h2>
+              <h2>Alcoholische Dranken</h2>
               <ul>
-                <li><span>Biologische appelsap</span><span>3,50</span></li>
-                <li><span>Jus d'orange</span><span>5,-</span></li>
-                <li><span>Home made ice tea</span><span>4,-</span></li>
-                <li><span>Lassi (van de week)</span><span>4,-</span></li>
-                <li><span>Smoothie van de week</span><span>6,50</span></li>
-              </ul>
-            </div>
+                <li><span>Bier</span><span>4</span></li>
+                <p>Hertog Jan 0.3</p>
 
-            <div className="menu-card">
-              <h2>Alcoholisch</h2>
-              <ul>
-                <li><span>Rode Wijn</span><span>5,-</span></li>
-                <li><span>Witte Wijn</span><span>5,-</span></li>
-                <li><span>Rosé</span><span>5,-</span></li>
-                <li><span>Pilsje</span><span>4,-</span></li>
-                <li><span>Blond bier</span><span>5,-</span></li>
-                <li><span>Bock bier</span><span>5,-</span></li>
+                <li><span>Wijnen</span><span>6</span></li>
+                <p>Wit:</p>
+                <p>Chardonnay Josephine 2024 13,5%</p>
+                <p>Een frisse die doet denken aan cirtoentaart, banaan, peer, vanille en kastanje</p>
+                
+                <p style={{marginTop: '1rem'}}>Rood:</p>
+                <p>Rioja XIII Lunas 2018 14%</p>
+                <p>een blend van Tempranillo en Garnacha
+uit de rioja streek, en 12 maanden gerijpt</p>
+                
+                <p style={{marginTop: '1rem'}}>Cava:</p>
+                <p>Perelda 2023 11,5%</p>
+                <p>een klassieke cava die gemixt is van verschillende
+druivenrassen, tot 15 maanden gerijpt</p>
               </ul>
             </div>
           </div>
