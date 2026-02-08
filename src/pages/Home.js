@@ -96,6 +96,17 @@ export default function Home() {
             <p>Vier jouw moment bij ons! Van babyshowers tot borrels — onze lunchroom is te huur voor jouw speciale gelegenheid.</p>
           </div>
         </Link>
+
+      <Link to="/reserveren" className="card">
+          <img
+            src="https://images.unsplash.com/photo-1635548166842-bf67bacbefaa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Reserveren"
+          />
+          <div className="card-content">
+            <h3>RERSERVEREN</h3>
+            <p>Reserveer een tafeltje en geniet van koffie, taart of lunch in onze warme en gezellige lunchroom.</p>
+          </div>
+        </Link>
       </section>
 
       {/* Contact Section */}
