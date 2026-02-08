@@ -44,9 +44,13 @@ export default function Home() {
         </div>
 
         <div className="three-gs-image">
-          <img
-            src="https://images.unsplash.com/photo-1762092259684-60f2b81f6ccd?auto=format&fit=crop&q=80&w=735"
-            alt="Speciaalzaak medewerkers"
+          <video
+          src="/videos/speciaalzaak.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="three-gs-video"
           />
         </div>
       </section>
