@@ -31,7 +31,7 @@ export default function Reserveren() {
         "CoLqh9mfvCXmBDyuJ"
       )
       .then(() => {
-        alert("Bedankt! Je reservering is succesvol verzonden.");
+        alert("Bedankt! Je reservering is ontvangen en wordt definitief na bevestiging per e-mail.");
         setFormData({
           naam: "",
           email: "",
