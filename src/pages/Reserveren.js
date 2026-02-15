@@ -6,6 +6,7 @@ export default function Reserveren() {
     naam: "",
     email: "",
     datum: "",
+    tijd: "",
     personen: "",
     opmerking: "",
   });
@@ -25,17 +26,21 @@ export default function Reserveren() {
           naam: formData.naam,
           email: formData.email,
           datum: formData.datum,
+          tijd: formData.tijd,
           personen: formData.personen,
           opmerking: formData.opmerking,
         },
         "CoLqh9mfvCXmBDyuJ"
       )
       .then(() => {
-        alert("Bedankt! Je reservering is ontvangen en wordt definitief na bevestiging per e-mail.");
+        alert(
+          "Bedankt! Je reservering is ontvangen en wordt definitief na bevestiging per e-mail."
+        );
         setFormData({
           naam: "",
           email: "",
           datum: "",
+          tijd: "",
           personen: "",
           opmerking: "",
         });
@@ -53,8 +58,8 @@ export default function Reserveren() {
         <div className="reserveren-overlay">
           <h1>Reserveren</h1>
           <p>
-            Kom gezellig langs bij De Speciaalzaak! Reserveer eenvoudig een tafeltje
-            en wij zorgen voor koffie, taart en een warm welkom.
+            Kom gezellig langs bij De Speciaalzaak! Reserveer eenvoudig een
+            tafeltje en wij zorgen voor koffie, taart en een warm welkom.
           </p>
         </div>
       </section>
@@ -64,10 +69,12 @@ export default function Reserveren() {
         <div className="reserveren-card">
           <h2>Maak een reservering</h2>
           <p className="reserveren-intro">
-            Vul het formulier hieronder in. We bevestigen je reservering zo snel mogelijk.
+            Vul het formulier hieronder in. We bevestigen je reservering zo snel
+            mogelijk.
           </p>
 
           <form className="reserveren-form" onSubmit={handleSubmit}>
+            {/* Naam + Email */}
             <div className="form-row">
               <div className="form-group">
                 <label>Naam</label>
@@ -94,6 +101,7 @@ export default function Reserveren() {
               </div>
             </div>
 
+            {/* Datum + Tijd */}
             <div className="form-row">
               <div className="form-group">
                 <label>Datum</label>
@@ -107,19 +115,32 @@ export default function Reserveren() {
               </div>
 
               <div className="form-group">
-                <label>Aantal personen</label>
+                <label>Tijd</label>
                 <input
-                  type="number"
-                  name="personen"
-                  min="1"
-                  placeholder="Bijv. 4"
-                  value={formData.personen}
+                  type="time"
+                  name="tijd"
+                  value={formData.tijd}
                   onChange={handleChange}
                   required
                 />
               </div>
             </div>
 
+            {/* Personen */}
+            <div className="form-group">
+              <label>Aantal personen</label>
+              <input
+                type="number"
+                name="personen"
+                min="1"
+                placeholder="Bijv. 4"
+                value={formData.personen}
+                onChange={handleChange}
+                required
+              />
+            </div>
+
+            {/* Opmerking */}
             <div className="form-group full-width">
               <label>Opmerking</label>
               <textarea

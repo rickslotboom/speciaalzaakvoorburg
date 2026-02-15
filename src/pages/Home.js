@@ -122,6 +122,11 @@ export default function Home() {
             <p>2271 CG Voorburg</p>
             <p>Tel: 06 81698345</p>
           </div>
+          <div className="openingstijden">
+            <h4>Openingstijden</h4>
+            <p>Dinsdag t/m Zaterdag: 09:00 - 17:00</p>
+            <p>Zondag & Maandag: Gesloten</p>
+          </div>
         </div>
       </section>
     </div>
