@@ -120,7 +120,8 @@ export default function Home() {
           <div className="contact-details">
             <p>Herenstraat 16</p>
             <p>2271 CG Voorburg</p>
-            <p>Tel: 06 81698345</p>
+            <p>Telefoonnummer Lunchroom: 0703116961</p>
+            <p>Telefoonnummer Zorg: 06 81698345</p>
           </div>
           <div className="openingstijden">
             <h4>Openingstijden</h4>
