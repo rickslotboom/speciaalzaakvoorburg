@@ -18,10 +18,10 @@ export default function Taarten() {
     },
     {
       id: 3,
-      title: "Opera Cake (Glutenvrij)",
+      title: "Opera Cake",
       img: "/images/opera-cake.jpg",
-      desc: "Een elegante Franse laagjescake met amandelbiscuit, zachte koffiebotercrème en een glanzende chocoladeganache. Delicaat, luxueus en zonder gluten, met behoud van de klassieke smaak.",
-      ingredienten: "Amandelmeel (in plaats van bloem), suiker, eieren, boter, espresso of sterke koffie, pure chocolade, room. Let op: Controleer dat alle gebruikte chocolade en bakingrediënten gecertificeerd glutenvrij zijn."
+      desc: "Een elegante Franse laagjescake met amandelbiscuit, zachte koffiebotercrème en een glanzende chocoladeganache. Delicaat, luxueus, met behoud van de klassieke smaak.",
+      ingredienten: "Amandelmeel (in plaats van bloem), suiker, eieren, boter, espresso of sterke koffie, pure chocolade, room."
     },
     {
       id: 4,
