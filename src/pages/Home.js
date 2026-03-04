@@ -43,16 +43,26 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="three-gs-image">
-          <video
-          src="/videos/speciaalzaak.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="three-gs-video"
-          />
-        </div>
+       
+<div className="three-gs-image">
+  <div className="photo-collage">
+    <div className="collage-col">
+      <img src="/images/foto9.jpeg" alt="Foto 9" className="collage-img" />
+      <img src="/images/foto8.jpeg" alt="Foto 8" className="collage-img" />
+      <img src="/images/foto3.jpeg" alt="Foto 3" className="collage-img" />
+    </div>
+    <div className="collage-col">
+      <img src="/images/foto5.jpeg" alt="Foto 5" className="collage-img" />
+      <img src="/images/foto7.jpeg" alt="Foto 7" className="collage-img" />
+      <img src="/images/foto1.jpeg" alt="Foto 1" className="collage-img" />
+    </div>
+    <div className="collage-col">
+      <img src="/images/foto10.jpeg" alt="Foto 10" className="collage-img" />
+      <img src="/images/foto2.jpeg" alt="Foto 2" className="collage-img" />
+      <img src="/images/foto4.jpeg" alt="Foto 4" className="collage-img" />
+    </div>
+  </div>
+</div>
       </section>
 
       {/* Section 2 - Cards */}
