@@ -7,6 +7,7 @@ import Medewerkers from "./pages/Medewerkers";
 import MedewerkerDetail from "./pages/MedewerkerDetail";
 import Evenementen from "./pages/Evenementen";
 import Reserveren from "./pages/Reserveren";
+import PaasbrunchReserveren from "./pages/paasBrunchReserveren";
 
 import "./App.css";
 
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/medewerkers/:id" element={<MedewerkerDetail />} />
         <Route path="/evenementen" element={<Evenementen />} />
         <Route path="/reserveren" element={<Reserveren />} />
+        <Route path="/paasbrunch" element={<PaasbrunchReserveren />} />
       </Routes>
     </BrowserRouter>
   );
