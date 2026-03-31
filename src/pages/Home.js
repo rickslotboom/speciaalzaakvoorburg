@@ -13,24 +13,27 @@ export default function Home() {
           <h2>Maandag 6 april (Tweede Paasdag) vanaf 11:00 uur</h2>
 
           <div className="g-item">
-            <p>
+        
+  <p>Laatste plaatsen voor de Paasbrunch.</p>
 
-Laatste plaatsen voor de Paasbrunch.
 
-Op 2e Paasdag (6 april) bent u van harte welkom voor onze gezellige en smaakvolle 3-gangen Paasbrunch.
+  <p>Op 2e Paasdag (6 april) bent u van harte welkom voor onze gezellige en smaakvolle 3-gangen Paasbrunch.</p>
 
-Tijdens deze  brunch serveren wij:
+  <p>Tijdens deze  brunch serveren wij:
 een heerlijk voorafje van soep of frisse yoghurt.
 een selectie vers belegde broodjes en hartige lekkernijen
-een zoete afsluiting met paaslekkernijen.
+een zoete afsluiting met paaslekkernijen.</p>
 
- Tijd: 11.00 – 14.00 uur
+  <p>
+Tijd: 11.00 – 14.00 uur</p>
 
-<b>Let op: er zijn nog slechts 4 plaatsen beschikbaar.</b>
+  <p>
+<b>Let op: er zijn nog slechts 4 plaatsen beschikbaar.</b></p>
 
-Wilt u er nog bij zijn? Reserveer hier:
+  <p>
+Wilt u er nog bij zijn? Reserveer hier:</p>
 
-            </p>
+            
           </div>
 
           <div className="g-item">
