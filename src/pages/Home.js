@@ -6,63 +6,48 @@ export default function Home() {
     <div className="app-container">
       <header className="hero-section"></header>
 
-      {/* Section 1 - Three G's */}
+      {/* Section 1 - Paasbrunch */}
       <section className="three-gs-section">
         <div className="three-gs-content">
-          <h3>Welkom bij De Speciaalzaak 🌿</h3>
-          <h2>Bij ons draait alles om gezelligheid, smaak en samen zijn</h2>
+          <h3>🐣 Paasbrunch bij De Speciaalzaak</h3>
+          <h2>Maandag 6 april (Tweede Paasdag) vanaf 11:00 uur</h2>
 
           <div className="g-item">
             <p>
-              We zijn een familie met een droom: een plek creëren waar iedereen zich thuis voelt. Waar koffie met
-              aandacht wordt geschonken, taarten met liefde worden gebakken en heerlijke lunches met een glimlach
-              worden geserveerd.
+
+Laatste plaatsen voor de Paasbrunch.
+
+Op 2e Paasdag (6 april) bent u van harte welkom voor onze gezellige en smaakvolle 3-gangen Paasbrunch.
+
+Tijdens deze  brunch serveren wij:
+een heerlijk voorafje van soep of frisse yoghurt.
+een selectie vers belegde broodjes en hartige lekkernijen
+een zoete afsluiting met paaslekkernijen.
+
+ Tijd: 11.00 – 14.00 uur
+
+<b>Let op: er zijn nog slechts 4 plaatsen beschikbaar.</b>
+
+Wilt u er nog bij zijn? Reserveer hier:
+
             </p>
           </div>
 
           <div className="g-item">
-            <p>
-              In onze lunchroom werken we samen met een bijzonder team — mensen met een verstandelijke beperking, elk
-              met hun eigen talent, humor en hart. Samen maken we van elke dag iets moois.
-            </p>
-          </div>
-
-          <div className="g-item">
-            <p>
-              Bij De Speciaalzaak geloven we dat iedereen iets te brengen heeft. We kijken niet naar wat iemand niet
-              kan, maar juist naar wat iemand wél kan. En dat voel je — in de sfeer, in de lach en in alles wat we doen.
-            </p>
-          </div>
-
-          <div className="g-item">
-            <p>
-              Kom gezellig langs voor een kop koffie, een stuk huisgemaakte taart of een lekkere lunch. Laat je verrassen
-              door de smaak, de warmte en de mensen achter De Speciaalzaak. De Speciaalzaak – gewoon een fijne plek om te
-              zijn.
-            </p>
+            <Link to="/paasbrunch" className="primary-button">
+              Reserveer voor de Paasbrunch
+            </Link>
           </div>
         </div>
 
-       
-<div className="three-gs-image">
-  <div className="photo-collage">
-    <div className="collage-col">
-      <img src="/images/foto9.jpeg" alt="Foto 9" className="collage-img" />
-      <img src="/images/foto8.jpeg" alt="Foto 8" className="collage-img" />
-      <img src="/images/foto3.jpeg" alt="Foto 3" className="collage-img" />
-    </div>
-    <div className="collage-col">
-      <img src="/images/foto5.jpeg" alt="Foto 5" className="collage-img" />
-      <img src="/images/foto7.jpeg" alt="Foto 7" className="collage-img" />
-      <img src="/images/foto1.jpeg" alt="Foto 1" className="collage-img" />
-    </div>
-    <div className="collage-col">
-      <img src="/images/foto10.jpeg" alt="Foto 10" className="collage-img" />
-      <img src="/images/foto2.jpeg" alt="Foto 2" className="collage-img" />
-      <img src="/images/foto4.jpeg" alt="Foto 4" className="collage-img" />
-    </div>
-  </div>
-</div>
+        {/* Paas foto */}
+        <div className="three-gs-image">
+          <img
+            src="/images/pasen.jpg"
+            alt="Paasbrunch bij De Speciaalzaak"
+            className="single-feature-image"
+          />
+        </div>
       </section>
 
       {/* Section 2 - Cards */}
