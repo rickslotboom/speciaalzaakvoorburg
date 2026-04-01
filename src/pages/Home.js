@@ -14,34 +14,22 @@ export default function Home() {
 
           <div className="g-item">
         
-  <p>Laatste plaatsen voor de Paasbrunch.</p>
+  <p>De paasbrunch is volgeboekt! 
+</p>
 
 
-  <p>Op 2e Paasdag (6 april) bent u van harte welkom voor onze gezellige en smaakvolle 3-gangen Paasbrunch.</p>
-
-  <p>Tijdens deze  brunch serveren wij:
-een heerlijk voorafje van soep of frisse yoghurt.
-een selectie vers belegde broodjes en hartige lekkernijen
-een zoete afsluiting met paaslekkernijen.</p>
+ 
 
   <p>
-Tijd: 11.00 – 14.00 uur</p>
+<b>
+Alle plekken zijn inmiddels gereserveerd.</b></p>
 
-  <p>
-<b>Let op: er zijn nog slechts 4 plaatsen beschikbaar.</b></p>
 
-  <p>
-Wilt u er nog bij zijn? Reserveer hier:</p>
 
             
           </div>
 
-          <div className="g-item">
-            <Link to="/paasbrunch" className="primary-button">
-              Reserveer voor de Paasbrunch
-            </Link>
-          </div>
-        </div>
+        
 
         {/* Paas foto */}
         <div className="three-gs-image">
