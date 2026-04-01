@@ -25,11 +25,11 @@ export default function Home() {
 Alle plekken zijn inmiddels gereserveerd.</b></p>
 
 
-
             
           </div>
 
         
+        </div>
 
         {/* Paas foto */}
         <div className="three-gs-image">
