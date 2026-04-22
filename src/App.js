@@ -1,8 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/Homep";
 import Taarten from "./pages/Taarten";
 import Menu from "./pages/Menu";
+import MenuLente from "./pages/MenuLente";
+import MenuSpring from "./pages/MenuSpring";
 import Medewerkers from "./pages/Medewerkers";
 import MedewerkerDetail from "./pages/MedewerkerDetail";
 import Evenementen from "./pages/Evenementen";
@@ -19,6 +21,8 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/taarten" element={<Taarten />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/menulente" element={<MenuLente />} />
+        <Route path="/menuspring" element={<MenuSpring />} />
         <Route path="/medewerkers" element={<Medewerkers/>} />
         <Route path="/medewerkers/:id" element={<MedewerkerDetail />} />
         <Route path="/evenementen" element={<Evenementen />} />

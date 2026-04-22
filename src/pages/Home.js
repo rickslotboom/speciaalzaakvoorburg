@@ -6,39 +6,63 @@ export default function Home() {
     <div className="app-container">
       <header className="hero-section"></header>
 
-      {/* Section 1 - Paasbrunch */}
+      {/* Section 1 - Three G's */}
       <section className="three-gs-section">
         <div className="three-gs-content">
-          <h3>🐣 Paasbrunch bij De Speciaalzaak</h3>
-          <h2>Maandag 6 april (Tweede Paasdag) vanaf 11:00 uur</h2>
+          <h3>Welkom bij De Speciaalzaak 🌿</h3>
+          <h2>Bij ons draait alles om gezelligheid, smaak en samen zijn</h2>
 
           <div className="g-item">
-        
-  <p>De paasbrunch is volgeboekt! 
-</p>
-
-
- 
-
-  <p>
-<b>
-Alle plekken zijn inmiddels gereserveerd.</b></p>
-
-
-            
+            <p>
+              We zijn een familie met een droom: een plek creëren waar iedereen zich thuis voelt. Waar koffie met
+              aandacht wordt geschonken, taarten met liefde worden gebakken en heerlijke lunches met een glimlach
+              worden geserveerd.
+            </p>
           </div>
 
-        
+          <div className="g-item">
+            <p>
+              In onze lunchroom werken we samen met een bijzonder team — mensen met een verstandelijke beperking, elk
+              met hun eigen talent, humor en hart. Samen maken we van elke dag iets moois.
+            </p>
+          </div>
+
+          <div className="g-item">
+            <p>
+              Bij De Speciaalzaak geloven we dat iedereen iets te brengen heeft. We kijken niet naar wat iemand niet
+              kan, maar juist naar wat iemand wél kan. En dat voel je — in de sfeer, in de lach en in alles wat we doen.
+            </p>
+          </div>
+
+          <div className="g-item">
+            <p>
+              Kom gezellig langs voor een kop koffie, een stuk huisgemaakte taart of een lekkere lunch. Laat je verrassen
+              door de smaak, de warmte en de mensen achter De Speciaalzaak. De Speciaalzaak – gewoon een fijne plek om te
+              zijn.
+            </p>
+          </div>
         </div>
 
-        {/* Paas foto */}
-        <div className="three-gs-image">
-          <img
-            src="/images/pasen.jpg"
-            alt="Paasbrunch bij De Speciaalzaak"
-            className="single-feature-image"
-          />
-        </div>
+       
+<div className="three-gs-image">
+  <div className="photo-collage">
+    <div className="collage-col">
+      <img src="/images/foto9.jpeg" alt="Foto 9" className="collage-img" />
+      <img src="/images/foto8.jpeg" alt="Foto 8" className="collage-img" />
+      <img src="/images/foto3.jpeg" alt="Foto 3" className="collage-img" />
+    </div>
+    <div className="collage-col">
+      <img src="/images/foto5.jpeg" alt="Foto 5" className="collage-img" />
+      <img src="/images/foto7.jpeg" alt="Foto 7" className="collage-img" />
+      <img src="/images/foto1.jpeg" alt="Foto 1" className="collage-img" />
+    </div>
+    <div className="collage-col">
+      <img src="/images/foto10.jpeg" alt="Foto 10" className="collage-img" />
+      <img src="/images/foto2.jpeg" alt="Foto 2" className="collage-img" />
+      <img src="/images/foto4.jpeg" alt="Foto 4" className="collage-img" />
+    </div>
+  </div>
+</div>
       </section>
 
       {/* Section 2 - Cards */}
