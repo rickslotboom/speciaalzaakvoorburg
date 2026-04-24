@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Homep";
+import HomeMoederdag from "./pages/Homep";
 import Taarten from "./pages/Taarten";
 import Menu from "./pages/Menu";
 import MenuLente from "./pages/MenuLente";
@@ -12,13 +12,12 @@ import Reserveren from "./pages/Reserveren";
 import PaasbrunchReserveren from "./pages/paasBrunchReserveren";
 
 import "./App.css";
-
 export default function App() {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomeMoederdag />} />
         <Route path="/taarten" element={<Taarten />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menulente" element={<MenuLente />} />
@@ -27,7 +26,7 @@ export default function App() {
         <Route path="/medewerkers/:id" element={<MedewerkerDetail />} />
         <Route path="/evenementen" element={<Evenementen />} />
         <Route path="/reserveren" element={<Reserveren />} />
-        <Route path="/paasbrunch" element={<PaasbrunchReserveren />} />
+        <Route path="/hightea" element={<PaasbrunchReserveren />} />
       </Routes>
     </BrowserRouter>
   );

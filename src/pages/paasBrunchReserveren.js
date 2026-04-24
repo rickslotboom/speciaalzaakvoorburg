@@ -24,17 +24,17 @@ export default function PaasbrunchReserveren() {
         {
           naam: formData.naam,
           email: formData.email,
-          datum: "6 april - Tweede Paasdag",
+          datum: "10 Mei - Moederdag",
           tijd: formData.tijd,
           personen: formData.personen,
           opmerking: formData.opmerking,
-          evenement: "Paasbrunch",
+          evenement: "Moederdag",
         },
         "CoLqh9mfvCXmBDyuJ"
       )
       .then(() => {
         alert(
-          "Bedankt! Je reservering voor de Paasbrunch is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
+          "Bedankt! Je reservering voor de Hightea is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
         );
 
         setFormData({
@@ -56,10 +56,10 @@ export default function PaasbrunchReserveren() {
       {/* Hero */}
       <section className="reserveren-hero">
         <div className="reserveren-overlay">
-          <h1>🐣 Paasbrunch</h1>
+          <h1>Moederdag</h1>
           <p>
-            Vier Tweede Paasdag bij De Speciaalzaak! Op maandag 6 april serveren
-            wij een gezellige paasbrunch vanaf 11:00 uur.
+            Vier Moederdag bij De Speciaalzaak! Op zondag 10 mei serveren
+            wij een gezellige hightea vanaf 13:00 uur.
           </p>
         </div>
       </section>
@@ -67,10 +67,10 @@ export default function PaasbrunchReserveren() {
       {/* Formulier */}
       <section className="reserveren-section">
         <div className="reserveren-card">
-          <h2>Reserveer voor de Paasbrunch</h2>
+          <h2>Reserveer voor de Moederdag Hightea</h2>
 
           <p className="reserveren-intro">
-            De paasbrunch vindt plaats op <strong>maandag 6 april</strong>.
+            De moederdag hightea vindt plaats op <strong>zondag 10 mei</strong>.
             Reserveer hieronder je tafel. Na je reserveringsaanvraag ontvang je van ons een e-mail met de betaalinformatie voor de aanbetaling.
           </p>
 
@@ -104,7 +104,7 @@ export default function PaasbrunchReserveren() {
 
             {/* Tijd */}
             <div className="form-group">
-              <label>Tijd (vanaf 11:00)</label>
+              <label>Tijd (vanaf 13:00)</label>
               <input
                 type="time"
                 name="tijd"
@@ -142,7 +142,7 @@ export default function PaasbrunchReserveren() {
             </div>
 
             <button type="submit" className="reserveren-button">
-              Reserveer Paasbrunch
+              Reserveer Hightea Moederdag
             </button>
           </form>
         </div>
