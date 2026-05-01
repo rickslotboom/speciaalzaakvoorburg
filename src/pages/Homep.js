@@ -6,37 +6,21 @@ export default function HomeMoederdag() {
     <div className="app-container">
       <header className="hero-section"></header>
 
-      {/* Section 1 - Paasbrunch */}
+      {/* Section 1 - Moederdag */}
       <section className="three-gs-section">
         <div className="three-gs-content">
           <h3>Hightea Moederdag bij De Speciaalzaak</h3>
           <h2>Zondag 10 mei vanaf 13:00 uur</h2>
-
           <div className="g-item">
-        
-  <p>👉 Verras je moeder met een gezellige high tea vol huisgemaakte lekkernijen en onbeperkt thee.  
-</p>
-
-
- 
-
-<p>
-  <b>
-    <Link to="/hightea">
-      Reserveer hier
-    </Link>{" "}
-    en geniet samen van een heerlijke middag bij De Speciaalzaak. 💚
-  </b>
-</p>
-
-
-            
+            <p>👉 Verras je moeder met een gezellige high tea vol huisgemaakte lekkernijen en onbeperkt thee.</p>
+            <p>
+              <b>
+                <Link to="/hightea">Reserveer hier</Link>{" "}
+                en geniet samen van een heerlijke middag bij De Speciaalzaak. 💚
+              </b>
+            </p>
           </div>
-
-        
         </div>
-
-        {/* Paas foto */}
         <div className="three-gs-image">
           <img
             src="/images/moederdag.jpeg"
@@ -46,7 +30,55 @@ export default function HomeMoederdag() {
         </div>
       </section>
 
-      {/* Section 2 - Cards */}
+      {/* Section 2 - Perzische Avond */}
+      <section className="three-gs-section">
+        <div className="three-gs-image">
+          <img
+            src="/images/perzisch.jpg"
+            alt="Perzische Avond bij De Speciaalzaak"
+            className="single-feature-image"
+          />
+        </div>
+        <div className="three-gs-content">
+          <h3>Perzische Avond bij De Speciaalzaak</h3>
+          <h2>Een culinaire reis naar het Midden-Oosten</h2>
+          <div className="g-item">
+            <p>👉 Dompel jezelf onder in de rijke smaken en geuren van de Perzische keuken — een onvergetelijke avond vol warmte, verhalen en heerlijk eten.</p>
+            <p>
+              <b>
+                <Link to="/perzische-avond">Meld je hier aan</Link>{" "}
+                en beleef een bijzondere avond vol Perzische gastvrijheid. 🌙
+              </b>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3 - Wijnproeverij */}
+      <section className="three-gs-section">
+        <div className="three-gs-content">
+          <h3>Wijnproeverij bij De Speciaalzaak</h3>
+          <h2>Een avond vol smaak en verhalen</h2>
+          <div className="g-item">
+            <p>👉 Ontdek nieuwe favorieten en leer meer over wijn in een ontspannen sfeer — begeleid door een enthousiaste wijnliefhebber met de lekkerste hapjes erbij.</p>
+            <p>
+              <b>
+                <Link to="/wijnproeverij">Meld je hier aan</Link>{" "}
+                en proef je weg door een avond vol mooie wijnen. 🍷
+              </b>
+            </p>
+          </div>
+        </div>
+        <div className="three-gs-image">
+          <img
+            src="/images/wijn.jpg"
+            alt="Wijnproeverij bij De Speciaalzaak"
+            className="single-feature-image"
+          />
+        </div>
+      </section>
+
+      {/* Section 4 - Cards */}
       <section className="cards-section">
         <Link to="/taarten" className="card">
           <img
@@ -66,7 +98,7 @@ export default function HomeMoederdag() {
           />
           <div className="card-content">
             <h3>ONZE KEUKEN</h3>
-            <p>Bijna alles wat we serveren maken we zelf —met seizoensproducten en ingrediënten van dichtbij.</p>
+            <p>Bijna alles wat we serveren maken we zelf — met seizoensproducten en ingrediënten van dichtbij.</p>
           </div>
         </Link>
 
@@ -92,13 +124,13 @@ export default function HomeMoederdag() {
           </div>
         </Link>
 
-      <Link to="/reserveren" className="card">
+        <Link to="/reserveren" className="card">
           <img
             src="https://images.unsplash.com/photo-1635548166842-bf67bacbefaa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Reserveren"
           />
           <div className="card-content">
-            <h3>RERSERVEREN</h3>
+            <h3>RESERVEREN</h3>
             <p>Reserveer een tafeltje en geniet van koffie, taart of lunch in onze warme en gezellige lunchroom.</p>
           </div>
         </Link>
