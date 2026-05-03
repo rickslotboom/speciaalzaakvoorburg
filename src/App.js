@@ -9,7 +9,6 @@ import MedewerkerDetail from "./pages/MedewerkerDetail";
 import Evenementen from "./pages/Evenementen";
 import Reserveren from "./pages/Reserveren";
 import WijnReserveren from "./pages/wijnReserveren";
-import PaasbrunchReserveren from "./pages/paasBrunchReserveren";
 import PerzischReserveren from "./pages/perzischReserveren";
 
 import "./App.css";
@@ -26,7 +25,6 @@ export default function App() {
         <Route path="/medewerkers/:id" element={<MedewerkerDetail />} />
         <Route path="/evenementen" element={<Evenementen />} />
         <Route path="/reserveren" element={<Reserveren />} />
-        <Route path="/hightea" element={<PaasbrunchReserveren />} />
         <Route path="/perzische-avond" element={<PerzischReserveren />} />
         <Route path="/wijnproeverij" element={<WijnReserveren />} />
       </Routes>

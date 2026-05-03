@@ -6,30 +6,7 @@ export default function HomeMoederdag() {
     <div className="app-container">
       <header className="hero-section"></header>
 
-      {/* Section 1 - Moederdag */}
-      <section className="three-gs-section">
-        <div className="three-gs-content">
-          <h3>Hightea Moederdag bij De Speciaalzaak</h3>
-          <h2>Zondag 10 mei vanaf 13:00 uur</h2>
-          <div className="g-item">
-            <p>👉 Verras je moeder met een gezellige high tea vol huisgemaakte lekkernijen en onbeperkt thee.</p>
-            <p>
-              <b>
-                <Link to="/hightea">Reserveer hier</Link>{" "}
-                en geniet samen van een heerlijke middag bij De Speciaalzaak. 💚
-              </b>
-            </p>
-          </div>
-        </div>
-        <div className="three-gs-image">
-          <img
-            src="/images/moederdag.jpeg"
-            alt="Moederdag bij De Speciaalzaak"
-            className="single-feature-image"
-          />
-        </div>
-      </section>
-
+      
       {/* Section 2 - Perzische Avond */}
       <section className="three-gs-section">
         <div className="three-gs-image">
