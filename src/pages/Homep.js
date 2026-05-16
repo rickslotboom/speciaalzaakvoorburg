@@ -8,28 +8,43 @@ export default function HomeMoederdag() {
 
       
       {/* Section 2 - Perzische Avond */}
-      <section className="three-gs-section">
-        <div className="three-gs-image">
-          <img
-            src="/images/perzisch.jpg"
-            alt="Perzische Avond bij De Speciaalzaak"
-            className="single-feature-image"
-          />
-        </div>
-        <div className="three-gs-content">
-          <h3>Perzische Avond bij De Speciaalzaak</h3>
-          <h2>Een culinaire reis naar het Midden-Oosten</h2>
-          <div className="g-item">
-            <p>👉 Dompel jezelf onder in de rijke smaken en geuren van de Perzische keuken — een onvergetelijke avond vol warmte, verhalen en heerlijk eten.</p>
-            <p>
-              <b>
-                <Link to="/perzische-avond">Meld je hier aan</Link>{" "}
-                en beleef een bijzondere avond vol Perzische gastvrijheid. 🌙
-              </b>
-            </p>
-          </div>
-        </div>
-      </section>
+<section className="three-gs-section">
+  <div className="three-gs-image">
+    <img
+      src="/images/perzisch.jpg"
+      alt="Perzische Avond bij De Speciaalzaak"
+      className="single-feature-image"
+    />
+  </div>
+
+  <div className="three-gs-content">
+    <h3>Perzische Avond bij De Speciaalzaak</h3>
+
+    <p style={{ fontWeight: "bold", color: "#b22222" }}>
+      Helaas is de Perzische Avond uitverkocht. Houd onze website in de gaten
+      voor nieuwe evenementen!
+    </p>
+
+    <div style={{ textDecoration: "line-through", opacity: 0.6 }}>
+      <h2>Een culinaire reis naar het Midden-Oosten</h2>
+
+      <div className="g-item">
+        <p>
+          👉 Dompel jezelf onder in de rijke smaken en geuren van de Perzische
+          keuken — een onvergetelijke avond vol warmte, verhalen en heerlijk
+          eten.
+        </p>
+
+        <p>
+          <b>
+            Meld je hier aan
+            en beleef een bijzondere avond vol Perzische gastvrijheid. 🌙
+          </b>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Section 3 - Wijnproeverij */}
       <section className="three-gs-section">
