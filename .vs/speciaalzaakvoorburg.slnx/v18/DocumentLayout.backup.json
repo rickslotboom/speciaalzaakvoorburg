@@ -47,7 +47,8 @@
               "RelativeToolTip": "src\\pages\\Evenementen.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-06-05T04:39:01.778Z"
+              "WhenOpened": "2026-06-05T04:39:01.778Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -59,7 +60,8 @@
               "RelativeToolTip": "src\\pages\\Homep.js",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-06-05T04:38:28.608Z"
+              "WhenOpened": "2026-06-05T04:38:28.608Z",
+              "EditorCaption": ""
             }
           ]
         }
