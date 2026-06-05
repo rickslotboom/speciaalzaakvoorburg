@@ -2,40 +2,18 @@ import React from "react";
 
 export default function Evenementen() {
   const eventImages = [
-     { src: "/images/poster1.jpeg", alt: "Events mei – De Speciaalzaak" },
+    { src: "/images/poster1.jpeg", alt: "Events mei – De Speciaalzaak" },
     { src: "/images/poster2.jpeg", alt: "Events juni – De Speciaalzaak" },
   ];
 
   return (
     <div className="taarten-page">
-      {/* Hero Section */}
-      <section
-        className="taarten-hero"
-        style={{
-          backgroundImage:
-            "url('https://source.unsplash.com/1600x900/?pastry-shop,bakery,cakes')",
-        }}
-      >
-        <div className="hero-overlay">
-          <h1>Onze Evenementen</h1>
-          <h3>Heeft u iets te vieren?</h3>
-          <p>
-            Dat kan bij ons! Wij denken graag met u mee en hebben volop leuke
-            ideeën om er een bijzonder moment van te maken.
-          </p>
-          <p>
-            Omdat De Speciaalzaak niet alle dagen geopend is, bestaat de
-            mogelijkheid om onze sfeervolle lunchroom af te huren voor een eigen
-            evenement of bijeenkomst.
-          </p>
-          <p>
-            Daarnaast organiseren we regelmatig inspirerende workshops voor
-            ouders, begeleiders en leerkrachten. Een leuke manier om kennis te
-            maken met ons team en te ontdekken wat De Speciaalzaak zo bijzonder
-            maakt.
-          </p>
-        </div>
-      </section>
+      {/* Hero: volledige afbeelding zichtbaar op volledige breedte */}
+      <img
+        src="/images/speciaalzaak.jpg"
+        alt="De Speciaalzaak"
+        style={{ width: "100%", display: "block" }}
+      />
 
       {/* Kalender Grid */}
       <section className="evenementen-kalender">

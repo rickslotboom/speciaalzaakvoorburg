@@ -14,7 +14,16 @@ export default function HomeMoederdag() {
 
   return (
     <div className="app-container">
-      <header className="hero-section"></header>
+      <header
+        className="hero-section"
+        style={{
+          backgroundImage: "url('/images/speciaalzaak.jpg')",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundColor: "#f0eeeb",
+        }}
+      />
 
       {/* Section 3 - Pannenkoekmiddag */}
       <section className="three-gs-section">
@@ -75,7 +84,7 @@ export default function HomeMoederdag() {
 
         <Link to="/menu" className="card">
           <img
-            src="https://images.unsplash.com/photo-1762614482251-c5781670753a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687"
+            src="/images/menu.jpg"
             alt="Onze Keuken"
           />
           <div className="card-content">
