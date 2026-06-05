@@ -11,12 +11,30 @@ export default function Reserveren() {
     opmerking: "",
   });
 
-  const handleChange = (e) => {
+  const [dateError, setDateError] = useState("");
+
+  const isClosedDay = (dateString: string) => {
+    const day = new Date(dateString).getDay();
+
+    // zondag = 0, maandag = 1
+    return day === 0 || day === 1;
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (isClosedDay(formData.datum)) {
+      alert(
+        "Reserveren is niet mogelijk op zondag en maandag. Kies een andere datum."
+      );
+      return;
+    }
 
     emailjs
       .send(
@@ -36,6 +54,7 @@ export default function Reserveren() {
         alert(
           "Bedankt! Je reservering is ontvangen en wordt definitief na bevestiging per e-mail."
         );
+
         setFormData({
           naam: "",
           email: "",
@@ -44,6 +63,8 @@ export default function Reserveren() {
           personen: "",
           opmerking: "",
         });
+
+        setDateError("");
       })
       .catch((error) => {
         console.error("Email fout:", error);
@@ -109,9 +130,33 @@ export default function Reserveren() {
                   type="date"
                   name="datum"
                   value={formData.datum}
-                  onChange={handleChange}
+                  onChange={(e) => {
+                    const selectedDate = e.target.value;
+
+                    if (isClosedDay(selectedDate)) {
+                      setDateError(
+                        "Wij zijn gesloten op zondag en maandag."
+                      );
+                    } else {
+                      setDateError("");
+                    }
+
+                    handleChange(e);
+                  }}
                   required
                 />
+
+                {dateError && (
+                  <p
+                    style={{
+                      color: "#d9534f",
+                      marginTop: "0.25rem",
+                      fontSize: "0.9rem",
+                    }}
+                  >
+                    {dateError}
+                  </p>
+                )}
               </div>
 
               <div className="form-group">
@@ -148,11 +193,15 @@ export default function Reserveren() {
                 placeholder="Bijvoorbeeld dieetwensen, kinderwagen, speciale gelegenheid..."
                 value={formData.opmerking}
                 onChange={handleChange}
-                rows="4"
+                rows={4}
               />
             </div>
 
-            <button type="submit" className="reserveren-button">
+            <button
+              type="submit"
+              className="reserveren-button"
+              disabled={!!dateError}
+            >
               Verstuur reservering
             </button>
           </form>
