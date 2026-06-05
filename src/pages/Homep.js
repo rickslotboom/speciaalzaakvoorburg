@@ -1,18 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function HomeMoederdag() {
+  const [muted, setMuted] = useState(true);
+
+  const toggleSound = () => {
+    const video = document.getElementById("pannenkoek-video");
+    if (video) {
+      video.muted = !video.muted;
+      setMuted(video.muted);
+    }
+  };
+
   return (
     <div className="app-container">
       <header className="hero-section"></header>
 
-    
-
-      {/* Section 3 - Wijnproeverij */}
+      {/* Section 3 - Pannenkoekmiddag */}
       <section className="three-gs-section">
-        <div className="three-gs-content">
-          <h3>Woensdag pannenkoekenmiddag</h3>
-         
+        <div className="three-gs-content" style={{ position: "relative" }}>
+          <video
+            id="pannenkoek-video"
+            src="/videos/pannenkoekmiddag.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{ width: "100%", borderRadius: "8px", display: "block" }}
+          />
+          <button
+            onClick={toggleSound}
+            style={{
+              position: "absolute",
+              bottom: "10px",
+              right: "10px",
+              background: "rgba(0,0,0,0.55)",
+              color: "white",
+              border: "none",
+              borderRadius: "50%",
+              width: "40px",
+              height: "40px",
+              fontSize: "18px",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            title={muted ? "Geluid aan" : "Geluid uit"}
+          >
+            {muted ? "🔇" : "🔊"}
+          </button>
         </div>
         <div className="three-gs-image">
           <img
