@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
-export default function PerzischReserveren() {
+export default function IndiaasReserveren() {
   const [formData, setFormData] = useState({
     naam: "",
     email: "",
@@ -24,17 +24,17 @@ export default function PerzischReserveren() {
         {
           naam: formData.naam,
           email: formData.email,
-          datum: "7 juni - Perzische avond",
+          datum: "19 juli - Indiase avond",
           tijd: formData.tijd,
           personen: formData.personen,
           opmerking: formData.opmerking,
-          evenement: "Perzische Avond",
+          evenement: "Indiase Avond",
         },
         "CoLqh9mfvCXmBDyuJ"
       )
       .then(() => {
         alert(
-          "Bedankt! Je reservering voor de Perzische avond is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
+          "Bedankt! Je reservering voor de Indiase avond is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
         );
 
         setFormData({
@@ -56,9 +56,9 @@ export default function PerzischReserveren() {
       {/* Hero */}
       <section className="reserveren-hero">
         <div className="reserveren-overlay">
-          <h1>Perzische avond</h1>
+          <h1>Indiase avond</h1>
           <p>
-            Kom gezellig de Perzische cultuur proeven bij De Speciaalzaak, op zondag 7 juni.
+            Kom gezellig de Indiase cultuur proeven bij De Speciaalzaak, op zondag 19 juli.
           </p>
         </div>
       </section>
@@ -66,10 +66,10 @@ export default function PerzischReserveren() {
       {/* Formulier */}
       <section className="reserveren-section">
         <div className="reserveren-card">
-          <h2>Reserveer voor de Perzische avond</h2>
+          <h2>Reserveer voor de Indiase avond</h2>
 
           <p className="reserveren-intro">
-            De perzische avond vindt plaats op <strong>zondag 7 juni</strong>.
+            De Indiase avond vindt plaats op <strong>zondag 19 juli</strong>.
             Reserveer hieronder je tafel. Na je reserveringsaanvraag ontvang je van ons een e-mail met de betaalinformatie voor de aanbetaling.
           </p>
 
@@ -141,7 +141,7 @@ export default function PerzischReserveren() {
             </div>
 
             <button type="submit" className="reserveren-button">
-              Reserveer voor de Perzische avond
+              Reserveer voor de Indiase avond
             </button>
           </form>
         </div>
