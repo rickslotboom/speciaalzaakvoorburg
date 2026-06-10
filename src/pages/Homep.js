@@ -160,7 +160,7 @@ export default function HomeMoederdag() {
           <div className="contact-details">
             <p>Herenstraat 16</p>
             <p>2271 CG Voorburg</p>
-            <p>Telefoonnummer Lunchroom: 0703116169</p>
+            <p>Telefoonnummer Lunchroom: 0703316169</p>
             <p>Telefoonnummer Zorg: 06 81698345</p>
           </div>
           <div className="openingstijden">
