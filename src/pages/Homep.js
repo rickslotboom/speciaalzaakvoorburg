@@ -36,7 +36,7 @@ export default function HomeMoederdag() {
         </div>
         <div className="three-gs-content">
           <h3>Indiase Avond bij De Speciaalzaak</h3>
-          <h2>Een culinaire reis naar het Midden-Oosten</h2>
+          <h2>Een culinaire reis naar India</h2>
           <div className="g-item">
             <p>Wilt u genieten van een avond vol authentieke Indiase smaken? Reserveer dan hieronder uw plaats. Het aantal plaatsen is beperkt.</p>
 
