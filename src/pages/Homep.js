@@ -12,6 +12,11 @@ export default function HomeMoederdag() {
     }
   };
 
+  const soldOutStyle = {
+  textDecoration: "line-through",
+  opacity: 0.7,
+};
+
   return (
     <div className="app-container">
       <header
@@ -25,32 +30,41 @@ export default function HomeMoederdag() {
         }}
       />
 
-        {/* Section 2 - Indiase Avond */}
-      <section className="three-gs-section">
-        <div className="three-gs-image">
-          <img
-            src="/images/indiase-avond.jpg"
-            alt="Indiase Avond bij De Speciaalzaak"
-            className="single-feature-image"
-          />
-        </div>
-        <div className="three-gs-content">
-          <h3>Indiase Avond bij De Speciaalzaak</h3>
-          <h2>Een culinaire reis naar India</h2>
-          <div className="g-item">
-            <p>Wilt u genieten van een avond vol authentieke Indiase smaken? Reserveer dan hieronder uw plaats. Het aantal plaatsen is beperkt.</p>
+     {/* Section 2 - Indiase Avond */}
+<section className="three-gs-section">
+  <div className="three-gs-image">
+    <img
+      src="/images/indiase-avond.jpg"
+      alt="Indiase Avond bij De Speciaalzaak"
+      className="single-feature-image"
+    />
+  </div>
 
- <p>Na het versturen van uw reservering ontvangt u van ons een betaalverzoek. De reservering is pas definitief na vooruitbetaling.</p>
-            <p>
-              <b>
-                <Link to="/indiase-avond">Meld je hier aan</Link>{" "}
-                en beleef een bijzondere avond vol Indiase gastvrijheid. 🌙
-              </b>
-            </p>
-          </div>
-        </div>
-      </section>
+  <div className="three-gs-content">
+    <h3 style={soldOutStyle}>Indiase Avond bij De Speciaalzaak</h3>
+    <h2 style={soldOutStyle}>Een culinaire reis naar India</h2>
 
+    <div className="g-item">
+      <p style={soldOutStyle}>
+        Wilt u genieten van een avond vol authentieke Indiase smaken? Reserveer dan hieronder uw plaats. Het aantal plaatsen is beperkt.
+      </p>
+
+      <p style={soldOutStyle}>
+        Na het versturen van uw reservering ontvangt u van ons een betaalverzoek. De reservering is pas definitief na vooruitbetaling.
+      </p>
+
+      <p
+        style={{
+          color: "orange",
+          fontWeight: "bold",
+          fontSize: "1.1rem",
+        }}
+      >
+        UITVERKOCHT
+      </p>
+    </div>
+  </div>
+</section>
       {/* Section 3 - Pannenkoekmiddag */}
       <section className="three-gs-section">
         <div className="three-gs-content" style={{ position: "relative" }}>
