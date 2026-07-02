@@ -24,17 +24,17 @@ export default function IndiaasReserveren() {
         {
           naam: formData.naam,
           email: formData.email,
-          datum: "19 juli - Indiase avond",
+          datum: "2 augustus - Zomer High tea",
           tijd: formData.tijd,
           personen: formData.personen,
           opmerking: formData.opmerking,
-          evenement: "Indiase Avond",
+          evenement: "Zomer High Tea",
         },
         "CoLqh9mfvCXmBDyuJ"
       )
       .then(() => {
         alert(
-          "Bedankt! Je reservering voor de Indiase avond is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
+          "Bedankt! Je reservering voor de zomer High Tea is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
         );
 
         setFormData({
@@ -56,9 +56,9 @@ export default function IndiaasReserveren() {
       {/* Hero */}
       <section className="reserveren-hero">
         <div className="reserveren-overlay">
-          <h1>Indiase avond</h1>
+          <h1>Zomer high tea</h1>
           <p>
-            Kom gezellig de Indiase cultuur proeven bij De Speciaalzaak, op zondag 19 juli.
+            Kom gezellig theeleuten bij De Speciaalzaak, op zondag 2 augustus.
           </p>
         </div>
       </section>
@@ -66,10 +66,10 @@ export default function IndiaasReserveren() {
       {/* Formulier */}
       <section className="reserveren-section">
         <div className="reserveren-card">
-          <h2>Reserveer voor de Indiase avond</h2>
+          <h2>Reserveer voor de Zomer High Tea</h2>
 
           <p className="reserveren-intro">
-            De Indiase avond vindt plaats op <strong>zondag 19 juli</strong>.
+            De zomer High Tea vindt plaats op <strong>zondag 2 augustus</strong>.
             Reserveer hieronder je tafel. Na je reserveringsaanvraag ontvang je van ons een e-mail met de betaalinformatie voor de aanbetaling.
           </p>
 
@@ -101,18 +101,7 @@ export default function IndiaasReserveren() {
               </div>
             </div>
 
-            {/* Tijd */}
-            <div className="form-group">
-              <label>Tijd (van 18:00 tot 21:00)</label>
-              <input
-                type="time"
-                name="tijd"
-                min="18:00"
-                value={formData.tijd}
-                onChange={handleChange}
-                required
-              />
-            </div>
+           
 
             {/* Personen */}
             <div className="form-group">
@@ -141,7 +130,7 @@ export default function IndiaasReserveren() {
             </div>
 
             <button type="submit" className="reserveren-button">
-              Reserveer voor de Indiase avond
+              Reserveer voor de Zomer High Tea
             </button>
           </form>
         </div>
