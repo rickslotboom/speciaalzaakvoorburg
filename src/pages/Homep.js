@@ -66,37 +66,7 @@ export default function HomeMoederdag() {
   </div>
 </section>
 
-      {/* Section 2b - Zomer High Tea (omgekeerde volgorde: tekst links, afbeelding rechts) */}
-      <Link to="/zomer-hightea" className="three-gs-section" style={{ textDecoration: "none", color: "inherit" }}>
-        <div className="three-gs-content">
-          <h3>Zomer High Tea bij De Speciaalzaak</h3>
-          <h2>
-            🌼 Reserveer{" "}
-            <span style={{ color: "orange", textDecoration: "underline" }}>
-              hier
-            </span>{" "}
-            voor onze Zomer High Tea op 2 augustus
-          </h2>
-
-          <div className="g-item">
-            <p>
-              Na reservering ontvang je van ons een betaallink. Na ontvangst van de betaling is de reservering definitief.
-            </p>
-
-            <p>
-              Wij kijken ernaar uit je te verwelkomen!
-            </p>
-          </div>
-        </div>
-
-        <div className="three-gs-image">
-          <img
-            src="/images/zomer-hightea.jpeg"
-            alt="Zomer High Tea bij De Speciaalzaak"
-            className="single-feature-image"
-          />
-        </div>
-      </Link>
+      
 
       {/* Section 3 - Pannenkoekmiddag */}
       <section className="three-gs-section">
