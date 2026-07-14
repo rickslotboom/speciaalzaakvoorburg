@@ -2,8 +2,7 @@ import React from "react";
 
 export default function Evenementen() {
   const eventImages = [
-    { src: "/images/juli.jpg", alt: "Events juli – De Speciaalzaak" },
-    { src: "/images/augustus.jpg", alt: "Events augustus – De Speciaalzaak" },
+    { src: "/images/juli.jpg", alt: "Events juli – De Speciaalzaak" }
   ];
 
   return (
