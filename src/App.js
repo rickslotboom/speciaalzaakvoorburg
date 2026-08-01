@@ -25,8 +25,8 @@ export default function App() {
         <Route path="/medewerkers/:id" element={<MedewerkerDetail />} />
         <Route path="/evenementen" element={<Evenementen />} />
         <Route path="/reserveren" element={<Reserveren />} />
-        <Route path="/zomer-hightea" element={<IndiaasReserveren />} />
-        <Route path="/wijnproeverij" element={<WijnReserveren />} />
+        <Route path="/turkse-avond" element={<IndiaasReserveren />} />
+        <Route path="/nazomer-hightea" element={<WijnReserveren />} />
       </Routes>
     </BrowserRouter>
   );

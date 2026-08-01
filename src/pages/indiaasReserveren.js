@@ -24,23 +24,22 @@ export default function IndiaasReserveren() {
         {
           naam: formData.naam,
           email: formData.email,
-          datum: "2 augustus - Zomer High tea",
-          tijd: formData.tijd,
+          datum: "27 september - Turkse Avond",
+          tijd: "18:00",
           personen: formData.personen,
           opmerking: formData.opmerking,
-          evenement: "Zomer High Tea",
+          evenement: "Turkse Avond",
         },
         "CoLqh9mfvCXmBDyuJ"
       )
       .then(() => {
         alert(
-          "Bedankt! Je reservering voor de zomer High Tea is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
+          "Bedankt! Je reservering voor de Turkse Avond is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
         );
 
         setFormData({
           naam: "",
           email: "",
-          tijd: "",
           personen: "",
           opmerking: "",
         });
@@ -56,9 +55,9 @@ export default function IndiaasReserveren() {
       {/* Hero */}
       <section className="reserveren-hero">
         <div className="reserveren-overlay">
-          <h1>Zomer high tea</h1>
+          <h1>Turkse Avond</h1>
           <p>
-            Kom gezellig theeleuten bij De Speciaalzaak, op zondag 2 augustus.
+           Geniet van de heerlijke Turkse keuken bij De Speciaalzaak, op zondag 27 september.
           </p>
         </div>
       </section>
@@ -66,10 +65,10 @@ export default function IndiaasReserveren() {
       {/* Formulier */}
       <section className="reserveren-section">
         <div className="reserveren-card">
-          <h2>Reserveer voor de Zomer High Tea</h2>
+          <h2>Reserveer voor de Turkse Avond</h2>
 
           <p className="reserveren-intro">
-            De zomer High Tea vindt plaats op <strong>zondag 2 augustus</strong>.
+            De Turkse Avond vindt plaats op <strong>zondag 27 september</strong>.
             Reserveer hieronder je tafel. Na je reserveringsaanvraag ontvang je van ons een e-mail met de betaalinformatie voor de aanbetaling.
           </p>
 
@@ -130,7 +129,7 @@ export default function IndiaasReserveren() {
             </div>
 
             <button type="submit" className="reserveren-button">
-              Reserveer voor de Zomer High Tea
+              Reserveer voor de Turkse Avond
             </button>
           </form>
         </div>

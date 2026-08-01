@@ -24,17 +24,17 @@ export default function WijnReserveren() {
         {
           naam: formData.naam,
           email: formData.email,
-          datum: "31 mei - Wijnproeverij",
-          tijd: formData.tijd,
+          datum: "6 september - Nazomer High Tea",
+          tijd: "14:00",
           personen: formData.personen,
           opmerking: formData.opmerking,
-          evenement: "Wijnproeverij",
+          evenement: "Nazomer High Tea",
         },
         "CoLqh9mfvCXmBDyuJ"
       )
       .then(() => {
         alert(
-          "Bedankt! Je reservering voor de Wijnproeverij is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
+          "Bedankt! Je reservering voor de Nazomer High Tea is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
         );
 
         setFormData({
@@ -56,9 +56,9 @@ export default function WijnReserveren() {
       {/* Hero */}
       <section className="reserveren-hero">
         <div className="reserveren-overlay">
-          <h1>Wijnproeverij</h1>
+          <h1>Nazomer High Tea</h1>
           <p>
-            Kom gezellig wijn proeven bij De Speciaalzaak, op zondag 31 mei.
+            Kom gezellig naar de nazomer High Tea bij De Speciaalzaak, op zondag 6 september.
           </p>
         </div>
       </section>
@@ -66,10 +66,10 @@ export default function WijnReserveren() {
       {/* Formulier */}
       <section className="reserveren-section">
         <div className="reserveren-card">
-          <h2>Reserveer voor de Wijnproeverij</h2>
+          <h2>Reserveer voor de Nazomer High Tea</h2>
 
           <p className="reserveren-intro">
-            De wijnproeverij vindt plaats op <strong>zondag 31 mei</strong>.
+            De High Tea vindt plaats op <strong>zondag 6 september</strong>.
             Reserveer hieronder. Na je reserveringsaanvraag ontvang je van ons een e-mail met de betaalinformatie voor de aanbetaling.
           </p>
 
@@ -101,18 +101,6 @@ export default function WijnReserveren() {
               </div>
             </div>
 
-            {/* Tijd */}
-            <div className="form-group">
-              <label>Tijd (van 16:00 tot 18:30)</label>
-              <input
-                type="time"
-                name="tijd"
-                min="16:00"
-                value={formData.tijd}
-                onChange={handleChange}
-                required
-              />
-            </div>
 
             {/* Personen */}
             <div className="form-group">
@@ -141,7 +129,7 @@ export default function WijnReserveren() {
             </div>
 
             <button type="submit" className="reserveren-button">
-              Reserveer voor de Wijnproeverij
+              Reserveer voor de Nazomer High Tea
             </button>
           </form>
         </div>

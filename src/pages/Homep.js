@@ -12,10 +12,7 @@ export default function HomeMoederdag() {
     }
   };
 
-  const soldOutStyle = {
-  textDecoration: "line-through",
-  opacity: 0.7,
-};
+  
 
   return (
     <div className="app-container">
@@ -30,45 +27,88 @@ export default function HomeMoederdag() {
         }}
       />
 
-     {/* Section 2 - Indiase Avond */}
-<section className="three-gs-section">
-  <div className="three-gs-image">
-    <img
-      src="/images/indiase-avond.jpg"
-      alt="Indiase Avond bij De Speciaalzaak"
-      className="single-feature-image"
-    />
-  </div>
-
-  <div className="three-gs-content">
-    <h3 style={soldOutStyle}>Indiase Avond bij De Speciaalzaak</h3>
-    <h2 style={soldOutStyle}>Een culinaire reis naar India</h2>
-
-    <div className="g-item">
-      <p style={soldOutStyle}>
-        Wilt u genieten van een avond vol authentieke Indiase smaken? Reserveer dan hieronder uw plaats. Het aantal plaatsen is beperkt.
-      </p>
-
-      <p style={soldOutStyle}>
-        Na het versturen van uw reservering ontvangt u van ons een betaalverzoek. De reservering is pas definitief na vooruitbetaling.
-      </p>
-
-      <p
-        style={{
-          color: "orange",
-          fontWeight: "bold",
-          fontSize: "1.1rem",
-        }}
-      >
-        UITVERKOCHT
-      </p>
-    </div>
-  </div>
+{/* Section - Vakantie / Gesloten */}
+<section
+  className="three-gs-section"
+  style={{
+    display: "block",
+    margin: "0 auto",
+  }}
+>
+  <img
+    src="/images/gesloten.jpg"
+    alt="Wij zijn op vakantie"
+    style={{
+      width: "100%",
+      height: "auto",
+      display: "block",
+    }}
+  />
 </section>
 
-      
+      {/* Section - High Tea */}
+      <section className="three-gs-section">
+        <div className="three-gs-content">
+          <h3>High Tea bij De Speciaalzaak</h3>
+          <div className="g-item">
+            <p>
+              Laat u verrassen door een heerlijke High Tea met een uitgebreide
+              selectie huisgemaakte zoete en hartige lekkernijen.
+            </p>
+            <p>
+              Geniet van onbeperkt thee, heerlijke smaken en vooral van een
+              gezellige middag samen.
+            </p>
+            <p>
+              <Link to="/nazomer-hightea" className="reserve-link">
+                Klik hier om te reserveren
+              </Link>
+            </p>
+            <p className="tagline">Proef. Ontspan. Geniet.</p>
+          </div>
+        </div>
+        <div className="three-gs-image">
+          <img
+            src="/images/high-tea.jpg"
+            alt="High Tea"
+            className="single-feature-image"
+          />
+        </div>
+      </section>
 
-      {/* Section 3 - Pannenkoekmiddag */}
+      {/* Section - Turkse Avond */}
+      <section className="three-gs-section">
+        <div className="three-gs-image">
+          <img
+            src="/images/turks.jpg"
+            alt="Turkse Avond"
+            className="single-feature-image"
+          />
+        </div>
+        <div className="three-gs-content">
+          <div className="g-item">
+            <p>Onze themadiners zijn inmiddels erg geliefd.</p>
+            <p>
+              Geen professionele chefs, maar mensen die met liefde hun
+              traditionele familierecepten voor u bereiden. Authentieke
+              smaken, rechtstreeks uit hun eigen keuken.
+            </p>
+            <p>Dat maakt onze themadiners zo bijzonder en uniek.</p>
+            <p>
+              Tijdens de Turkse avond kookt de familie van Muhamed voor u en
+              neemt zij u mee op een culinaire reis door de Turkse keuken.
+            </p>
+            <p>
+              <Link to="/turkse-avond" className="reserve-link">
+                Klik hier om te reserveren
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Section - Pannenkoekmiddag */}
       <section className="three-gs-section">
         <div className="three-gs-content" style={{ position: "relative" }}>
           <video
@@ -112,7 +152,7 @@ export default function HomeMoederdag() {
         </div>
       </section>
 
-      {/* Section 4 - Cards */}
+      {/* Section - Cards */}
       <section className="cards-section">
         <Link to="/taarten" className="card">
           <img
