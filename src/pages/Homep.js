@@ -27,25 +27,6 @@ export default function HomeMoederdag() {
         }}
       />
 
-{/* Section - Vakantie / Gesloten */}
-<section
-  className="three-gs-section"
-  style={{
-    display: "block",
-    margin: "0 auto",
-  }}
->
-  <img
-    src="/images/gesloten.jpg"
-    alt="Wij zijn op vakantie"
-    style={{
-      width: "100%",
-      height: "auto",
-      display: "block",
-    }}
-  />
-</section>
-
       {/* Section - High Tea */}
       <section className="three-gs-section">
         <div className="three-gs-content">
