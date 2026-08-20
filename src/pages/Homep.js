@@ -84,6 +84,9 @@ export default function HomeMoederdag() {
                 Klik hier om te reserveren
               </Link>
             </p>
+             <p style={{ textDecoration: "underline", fontWeight: "bold", color: "red" }}>
+              Nog maar 2 plekken zichtbaar
+            </p>
           </div>
         </div>
       </section>
