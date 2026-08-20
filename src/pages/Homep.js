@@ -206,7 +206,7 @@ export default function HomeMoederdag() {
           </div>
           <div className="openingstijden">
             <h4>Openingstijden</h4>
-            <p>Dinsdag t/m Zaterdag: 09:00 - 17:00</p>
+            <p>Dinsdag t/m Zaterdag: 09:00 - 16:00</p>
             <p>Zondag & Maandag: Gesloten</p>
           </div>
         </div>
