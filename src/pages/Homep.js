@@ -27,36 +27,6 @@ export default function HomeMoederdag() {
         }}
       />
 
-      {/* Section - High Tea */}
-      <section className="three-gs-section">
-        <div className="three-gs-content">
-          <h3>High Tea bij De Speciaalzaak</h3>
-          <div className="g-item">
-            <p>
-              Laat u verrassen door een heerlijke High Tea met een uitgebreide
-              selectie huisgemaakte zoete en hartige lekkernijen.
-            </p>
-            <p>
-              Geniet van onbeperkt thee, heerlijke smaken en vooral van een
-              gezellige middag samen.
-            </p>
-            <p>
-              <Link to="/nazomer-hightea" className="reserve-link">
-                Klik hier om te reserveren
-              </Link>
-            </p>
-            <p className="tagline">Proef. Ontspan. Geniet.</p>
-          </div>
-        </div>
-        <div className="three-gs-image">
-          <img
-            src="/images/high-tea.jpg"
-            alt="High Tea"
-            className="single-feature-image"
-          />
-        </div>
-      </section>
-
       {/* Section - Turkse Avond */}
       <section className="three-gs-section">
         <div className="three-gs-image">
@@ -79,13 +49,8 @@ export default function HomeMoederdag() {
               Tijdens de Turkse avond kookt de familie van Muhamed voor u en
               neemt zij u mee op een culinaire reis door de Turkse keuken.
             </p>
-            <p>
-              <Link to="/turkse-avond" className="reserve-link">
-                Klik hier om te reserveren
-              </Link>
-            </p>
              <p style={{ textDecoration: "underline", fontWeight: "bold", color: "red" }}>
-              Nog maar 2 plekken zichtbaar
+              Uitverkocht
             </p>
           </div>
         </div>
