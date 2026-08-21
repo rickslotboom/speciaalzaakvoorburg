@@ -12,8 +12,6 @@ export default function HomeMoederdag() {
     }
   };
 
-  
-
   return (
     <div className="app-container">
       <header
@@ -49,8 +47,13 @@ export default function HomeMoederdag() {
               Tijdens de Turkse avond kookt de familie van Muhamed voor u en
               neemt zij u mee op een culinaire reis door de Turkse keuken.
             </p>
+            <p>
+  <Link to="/turkse-avond" className="reserve-link">
+    Klik hier om te reserveren
+  </Link>
+</p>
              <p style={{ textDecoration: "underline", fontWeight: "bold", color: "red" }}>
-              Uitverkocht
+              Nog maar 2 plekken!
             </p>
           </div>
         </div>
@@ -67,7 +70,14 @@ export default function HomeMoederdag() {
             loop
             muted
             playsInline
-            style={{ width: "100%", borderRadius: "8px", display: "block" }}
+            style={{
+              width: "100%",
+              minHeight: "300px",
+              borderRadius: "8px",
+              display: "block",
+              backgroundColor: "#ddd",
+              objectFit: "cover",
+            }}
           />
           <button
             onClick={toggleSound}
