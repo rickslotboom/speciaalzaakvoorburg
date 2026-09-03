@@ -24,17 +24,17 @@ export default function IndiaasReserveren() {
         {
           naam: formData.naam,
           email: formData.email,
-          datum: "27 september - Turkse Avond",
+          datum: "8 november - Ethiopische Avond",
           tijd: "18:00",
           personen: formData.personen,
           opmerking: formData.opmerking,
-          evenement: "Turkse Avond",
+          evenement: "Ethiopische Avond",
         },
         "CoLqh9mfvCXmBDyuJ"
       )
       .then(() => {
         alert(
-          "Bedankt! Je reservering voor de Turkse Avond is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
+          "Bedankt! Je reservering voor de Ethiopische Avond is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
         );
 
         setFormData({
@@ -57,7 +57,7 @@ export default function IndiaasReserveren() {
         <div className="reserveren-overlay">
           <h1>Turkse Avond</h1>
           <p>
-           Geniet van de heerlijke Turkse keuken bij De Speciaalzaak, op zondag 27 september.
+           Geniet van de heerlijke Ethiopische keuken bij De Speciaalzaak, op zondag 8 november.
           </p>
         </div>
       </section>
@@ -68,7 +68,7 @@ export default function IndiaasReserveren() {
           <h2>Reserveer voor de Turkse Avond</h2>
 
           <p className="reserveren-intro">
-            De Turkse Avond vindt plaats op <strong>zondag 27 september</strong>.
+            De Ethiopische Avond vindt plaats op <strong>zondag 8 november</strong>.
             Reserveer hieronder je tafel. Na je reserveringsaanvraag ontvang je van ons een e-mail met de betaalinformatie voor de aanbetaling.
           </p>
 
@@ -129,7 +129,7 @@ export default function IndiaasReserveren() {
             </div>
 
             <button type="submit" className="reserveren-button">
-              Reserveer voor de Turkse Avond
+              Reserveer voor de Ethiopische Avond
             </button>
           </form>
         </div>
