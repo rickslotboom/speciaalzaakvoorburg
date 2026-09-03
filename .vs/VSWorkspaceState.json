@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\src"
+    "\\src",
+    "\\src\\pages"
   ],
+  "SelectedNode": "\\src\\pages\\Evenementen.js",
   "PreviewInSolutionExplorer": false
 }
