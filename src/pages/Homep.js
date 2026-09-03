@@ -25,6 +25,64 @@ export default function HomeMoederdag() {
         }}
       />
 
+      {/* Section - Ethiopische Avond */}
+      <section className="three-gs-section">
+        <div className="three-gs-image">
+          <img
+            src="/images/ethiopisch.jpg"
+            alt="Ethiopische Avond"
+            className="single-feature-image"
+          />
+        </div>
+        <div className="three-gs-content">
+          <div className="g-item">
+            <p>
+              Op 8 november maken we er bij De Speciaalzaak weer een
+              bijzondere avond van.
+            </p>
+            <p>
+              Samen met Restaurant Simba te Rotterdam laten we u
+              kennismaken met de heerlijke smaken van Ethiopië. Denk aan
+              geurige kruiden, kleurrijke gerechten en vooral: samen aan
+              tafel genieten.
+            </p>
+            <p>
+              De Ethiopische keuken draait om delen, gastvrijheid en
+              gezelligheid. Precies dat willen we deze avond ook laten
+              voelen.
+            </p>
+            <p>
+              Laat u verrassen, proef iets nieuws en geniet samen met ons
+              van een warme en sfeervolle avond, zoals u van ons gewend
+              bent bij De Speciaalzaak.
+            </p>
+            <p>
+              <Link
+                to="/turkse-avond"
+                style={{ fontWeight: "bold", textDecoration: "underline" }}
+              >
+                Reserveer hier.
+              </Link>
+            </p>
+            <p>
+              Na betaling van &euro; 37,50 is de reservering definitief.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section - Twaalfuurtje (alleen afbeelding) */}
+      <section className="three-gs-section">
+        <div className="three-gs-image single-image-section">
+          <img
+            src="/images/twaalfuurtje.jpg"
+            alt="Twaalfuurtje"
+            className="single-feature-image"
+          />
+        </div>
+      </section>
+
+
       {/* Section - Turkse Avond */}
       <section className="three-gs-section">
         <div className="three-gs-image">
@@ -100,63 +158,7 @@ export default function HomeMoederdag() {
         </div>
       </section>
 
-      {/* Section - Ethiopische Avond */}
-      <section className="three-gs-section">
-        <div className="three-gs-image">
-          <img
-            src="/images/ethiopisch.jpg"
-            alt="Ethiopische Avond"
-            className="single-feature-image"
-          />
-        </div>
-        <div className="three-gs-content">
-          <div className="g-item">
-            <p>
-              Op 8 november maken we er bij De Speciaalzaak weer een
-              bijzondere avond van.
-            </p>
-            <p>
-              Samen met Restaurant Simba te Rotterdam laten we u
-              kennismaken met de heerlijke smaken van Ethiopië. Denk aan
-              geurige kruiden, kleurrijke gerechten en vooral: samen aan
-              tafel genieten.
-            </p>
-            <p>
-              De Ethiopische keuken draait om delen, gastvrijheid en
-              gezelligheid. Precies dat willen we deze avond ook laten
-              voelen.
-            </p>
-            <p>
-              Laat u verrassen, proef iets nieuws en geniet samen met ons
-              van een warme en sfeervolle avond, zoals u van ons gewend
-              bent bij De Speciaalzaak.
-            </p>
-            <p>
-              <Link
-                to="/turkse-avond"
-                style={{ fontWeight: "bold", textDecoration: "underline" }}
-              >
-                Reserveer hier.
-              </Link>
-            </p>
-            <p>
-              Na betaling van &euro; 37,50 is de reservering definitief.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Section - Twaalfuurtje (alleen afbeelding) */}
-      <section className="three-gs-section">
-        <div className="three-gs-image single-image-section">
-          <img
-            src="/images/twaalfuurtje.jpg"
-            alt="Twaalfuurtje"
-            className="single-feature-image"
-          />
-        </div>
-      </section>
-
+      
       {/* Section - Cards */}
       <section className="cards-section">
         <Link to="/taarten" className="card">
