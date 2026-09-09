@@ -55,7 +55,7 @@ export default function IndiaasReserveren() {
       {/* Hero */}
       <section className="reserveren-hero">
         <div className="reserveren-overlay">
-          <h1>Turkse Avond</h1>
+          <h1>Ethiopische Avond</h1>
           <p>
            Geniet van de heerlijke Ethiopische keuken bij De Speciaalzaak, op zondag 8 november.
           </p>
@@ -65,7 +65,7 @@ export default function IndiaasReserveren() {
       {/* Formulier */}
       <section className="reserveren-section">
         <div className="reserveren-card">
-          <h2>Reserveer voor de Turkse Avond</h2>
+          <h2>Reserveer voor de Ethiopische Avond</h2>
 
           <p className="reserveren-intro">
             De Ethiopische Avond vindt plaats op <strong>zondag 8 november</strong>.
