@@ -58,7 +58,7 @@ export default function HomeMoederdag() {
             </p>
             <p>
               <Link
-                to="/turkse-avond"
+                to="/ethiopische-avond"
                 style={{ fontWeight: "bold", textDecoration: "underline" }}
               >
                 Reserveer hier.
