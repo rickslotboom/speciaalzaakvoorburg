@@ -10,12 +10,14 @@ import Evenementen from "./pages/Evenementen";
 import Reserveren from "./pages/Reserveren";
 import WijnReserveren from "./pages/wijnReserveren";
 import IndiaasReserveren from "./pages/indiaasReserveren";
+import Navbar from "./pages/Navbar";
 
 import "./App.css";
 export default function App() {
 
   return (
     <BrowserRouter>
+     <Navbar />
       <Routes>
         <Route path="/" element={<HomeMoederdag />} />
         <Route path="/taarten" element={<Taarten />} />

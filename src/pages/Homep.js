@@ -158,65 +158,6 @@ export default function HomeMoederdag() {
         </div>
       </section>
 
-      
-      {/* Section - Cards */}
-      <section className="cards-section">
-        <Link to="/taarten" className="card">
-          <img
-            src="https://images.unsplash.com/photo-1762280957898-51cbdf451a85?auto=format&fit=crop&q=80&w=1042"
-            alt="Onze Taarten"
-          />
-          <div className="card-content">
-            <h3>ONZE TAARTEN</h3>
-            <p>Bij De Speciaalzaak worden onze taarten met liefde gemaakt — vers uit onze eigen keuken.</p>
-          </div>
-        </Link>
-
-        <Link to="/menu" className="card">
-          <img
-            src="/images/menu.jpg"
-            alt="Onze Keuken"
-          />
-          <div className="card-content">
-            <h3>ONZE KEUKEN</h3>
-            <p>Bijna alles wat we serveren maken we zelf — met seizoensproducten en ingrediënten van dichtbij.</p>
-          </div>
-        </Link>
-
-        <Link to="/medewerkers" className="card">
-          <img
-            src="https://images.unsplash.com/photo-1762614279942-6e0a5e68dba6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687"
-            alt="Onze Medewerkers"
-          />
-          <div className="card-content">
-            <h3>ONZE MEDEWERKERS</h3>
-            <p>Bij De Speciaalzaak draait alles om mensen. Ontdek ons bijzondere team!</p>
-          </div>
-        </Link>
-
-        <Link to="/evenementen" className="card">
-          <img
-            src="https://images.unsplash.com/photo-1762613405932-808f609fee2a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170"
-            alt="Onze Evenementen"
-          />
-          <div className="card-content">
-            <h3>ONZE EVENEMENTEN</h3>
-            <p>Vier jouw moment bij ons! Van babyshowers tot borrels — onze lunchroom is te huur voor jouw speciale gelegenheid.</p>
-          </div>
-        </Link>
-
-        <Link to="/reserveren" className="card">
-          <img
-            src="https://images.unsplash.com/photo-1635548166842-bf67bacbefaa?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Reserveren"
-          />
-          <div className="card-content">
-            <h3>RESERVEREN</h3>
-            <p>Reserveer een tafeltje en geniet van koffie, taart of lunch in onze warme en gezellige lunchroom.</p>
-          </div>
-        </Link>
-      </section>
-
       {/* Contact Section */}
       <section className="contact-section">
         <div className="contact-content">
