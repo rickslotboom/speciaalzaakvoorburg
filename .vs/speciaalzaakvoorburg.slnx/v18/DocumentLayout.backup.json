@@ -7,8 +7,24 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Homep.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Navbar.js||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Navbar.js||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\App.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\App.css||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\index.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Menu.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Menu.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\indiaasReserveren.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
@@ -29,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\wijnReserveren.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\wijnReserveren.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\App.css||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.css||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,36 +54,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "App.css",
               "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\App.css",
               "RelativeDocumentMoniker": "src\\App.css",
               "ToolTip": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\App.css",
               "RelativeToolTip": "src\\App.css",
-              "ViewState": "AgIAAIUDAAAAAAAAAAAUwKADAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAKADAAAAAAAAAAAAAKADAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-06-05T09:23:16.84Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Navbar.js",
+              "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Navbar.js",
+              "RelativeDocumentMoniker": "src\\pages\\Navbar.js",
+              "ToolTip": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Navbar.js",
+              "RelativeToolTip": "src\\pages\\Navbar.js",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAAAI4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-18T08:01:30.019Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Evenementen.js",
-              "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Evenementen.js",
-              "RelativeDocumentMoniker": "src\\pages\\Evenementen.js",
-              "ToolTip": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Evenementen.js",
-              "RelativeToolTip": "src\\pages\\Evenementen.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABQAAAAAAAAAA==",
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\index.js",
+              "RelativeDocumentMoniker": "src\\index.js",
+              "ToolTip": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\index.js",
+              "RelativeToolTip": "src\\index.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-09-03T14:30:21.74Z"
+              "WhenOpened": "2026-09-18T07:58:54.281Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Menu.js",
+              "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Menu.js",
+              "RelativeDocumentMoniker": "src\\pages\\Menu.js",
+              "ToolTip": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Menu.js",
+              "RelativeToolTip": "src\\pages\\Menu.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-18T07:58:38.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\public\\index.html",
               "RelativeDocumentMoniker": "public\\index.html",
@@ -83,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "wijnReserveren.js",
               "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\wijnReserveren.js",
               "RelativeDocumentMoniker": "src\\pages\\wijnReserveren.js",
@@ -95,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "indiaasReserveren.js",
               "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\indiaasReserveren.js",
               "RelativeDocumentMoniker": "src\\pages\\indiaasReserveren.js",
@@ -103,33 +143,20 @@
               "RelativeToolTip": "src\\pages\\indiaasReserveren.js",
               "ViewState": "AgIAADUAAAAAAAAAAAAmwDkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-06-05T09:48:25.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-05T09:48:25.169Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "App.js",
               "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\App.js",
               "RelativeDocumentMoniker": "src\\App.js",
               "ToolTip": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\App.js",
               "RelativeToolTip": "src\\App.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAUwAcAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwAwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-06-05T09:22:28.363Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Reserveren.js",
-              "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Reserveren.js",
-              "RelativeDocumentMoniker": "src\\pages\\Reserveren.js",
-              "ToolTip": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Reserveren.js",
-              "RelativeToolTip": "src\\pages\\Reserveren.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-06-05T04:44:38.011Z"
             },
             {
               "$type": "Document",
@@ -139,10 +166,34 @@
               "RelativeDocumentMoniker": "src\\pages\\Homep.js",
               "ToolTip": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Homep.js",
               "RelativeToolTip": "src\\pages\\Homep.js",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAADwAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAAAJ4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-06-05T04:38:28.608Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Evenementen.js",
+              "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Evenementen.js",
+              "RelativeDocumentMoniker": "src\\pages\\Evenementen.js",
+              "ToolTip": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Evenementen.js",
+              "RelativeToolTip": "src\\pages\\Evenementen.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-09-03T14:30:21.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Reserveren.js",
+              "DocumentMoniker": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Reserveren.js",
+              "RelativeDocumentMoniker": "src\\pages\\Reserveren.js",
+              "ToolTip": "C:\\Users\\ricks\\source\\repos\\speciaalzaakvoorburg\\src\\pages\\Reserveren.js",
+              "RelativeToolTip": "src\\pages\\Reserveren.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-05T04:44:38.011Z"
             }
           ]
         }

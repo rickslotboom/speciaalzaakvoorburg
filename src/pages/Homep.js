@@ -56,16 +56,8 @@ export default function HomeMoederdag() {
               van een warme en sfeervolle avond, zoals u van ons gewend
               bent bij De Speciaalzaak.
             </p>
-            <p>
-              <Link
-                to="/ethiopische-avond"
-                style={{ fontWeight: "bold", textDecoration: "underline" }}
-              >
-                Reserveer hier.
-              </Link>
-            </p>
-            <p>
-              Na betaling van &euro; 37,50 is de reservering definitief.
+            <p style={{ textDecoration: "underline", fontWeight: "bold", color: "red" }}>
+              Uitverkocht!
             </p>
           </div>
         </div>
