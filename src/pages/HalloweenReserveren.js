@@ -12,39 +12,27 @@ import { db, auth } from "../firebase";
 
 const MAX_PER_SLOT = 5;
 
-// Tijdsloten van 9:00 tot 16:00, elke 30 minuten
-const TIJDSLOTEN: string[] = [];
+const TIJDSLOTEN = [];
 for (let h = 9; h < 16; h++) {
   TIJDSLOTEN.push(`${String(h).padStart(2, "0")}:00`);
   TIJDSLOTEN.push(`${String(h).padStart(2, "0")}:30`);
 }
 
-function isClosedDay(dateString: string): boolean {
+function isClosedDay(dateString) {
   const day = new Date(dateString).getDay();
   return day === 0 || day === 1;
 }
 
-function slotDocId(datum: string, tijd: string): string {
+function slotDocId(datum, tijd) {
   return `${datum}_${tijd.replace(":", "-")}`;
-}
-
-interface SlotBezetting {
-  [tijd: string]: number;
-}
-
-interface FormData {
-  naam: string;
-  email: string;
-  personen: string;
-  opmerking: string;
 }
 
 export default function HalloweenReserveren() {
   const [datum, setDatum] = useState("");
   const [dateError, setDateError] = useState("");
-  const [bezetting, setBezetting] = useState<SlotBezetting>({});
-  const [gekozenSlot, setGekozenSlot] = useState<string | null>(null);
-  const [formData, setFormData] = useState<FormData>({
+  const [bezetting, setBezetting] = useState({});
+  const [gekozenSlot, setGekozenSlot] = useState(null);
+  const [formData, setFormData] = useState({
     naam: "",
     email: "",
     personen: "",
@@ -65,7 +53,7 @@ export default function HalloweenReserveren() {
     const unsubscribes = TIJDSLOTEN.map((tijd) => {
       const ref = doc(db, "reserveringen-slots", slotDocId(datum, tijd));
       return onSnapshot(ref, (snap) => {
-        const count = snap.exists() ? (snap.data().count as number) : 0;
+        const count = snap.exists() ? snap.data().count : 0;
         setBezetting((prev) => ({ ...prev, [tijd]: count }));
       });
     });
@@ -73,7 +61,7 @@ export default function HalloweenReserveren() {
     return () => unsubscribes.forEach((u) => u());
   }, [datum]);
 
-  const handleDatumChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleDatumChange = (e) => {
     const val = e.target.value;
     setDatum(val);
     setGekozenSlot(null);
@@ -84,19 +72,17 @@ export default function HalloweenReserveren() {
     }
   };
 
-  const handleSlotKlik = (tijd: string) => {
+  const handleSlotKlik = (tijd) => {
     const bezet = bezetting[tijd] || 0;
     if (bezet >= MAX_PER_SLOT) return;
     setGekozenSlot(tijd);
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!gekozenSlot || !datum) return;
 
@@ -105,7 +91,7 @@ export default function HalloweenReserveren() {
     try {
       const ref = doc(db, "reserveringen-slots", slotDocId(datum, gekozenSlot));
       const snap = await getDoc(ref);
-      const huidigCount = snap.exists() ? (snap.data().count as number) : 0;
+      const huidigCount = snap.exists() ? snap.data().count : 0;
 
       if (huidigCount >= MAX_PER_SLOT) {
         alert("Dit tijdslot is net volgeraakt. Kies een ander tijdslot.");
@@ -144,7 +130,7 @@ export default function HalloweenReserveren() {
     setBezig(false);
   };
 
-  const vrijePlekken = (tijd: string) =>
+  const vrijePlekken = (tijd) =>
     Math.max(0, MAX_PER_SLOT - (bezetting[tijd] || 0));
 
   return (
