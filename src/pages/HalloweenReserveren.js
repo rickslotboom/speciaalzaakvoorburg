@@ -123,7 +123,7 @@ export default function HalloweenReserveren() {
 
       <section className="reserveren-section">
         <div className="reserveren-card">
-          <h2>🎃 Halloween — vrijdag 31 oktober</h2>
+          <h2>🎃 Halloween — zaterdag 31 oktober</h2>
           <p className="reserveren-intro">Kies een tijdslot en reserveer je plekje.</p>
 
           <div
@@ -195,7 +195,7 @@ export default function HalloweenReserveren() {
           >
             <h2 style={{ marginTop: 0 }}>Reservering bevestigen</h2>
             <p style={{ color: "#666", marginBottom: 20 }}>
-              🎃 Vrijdag 31 oktober om {gekozenSlot}
+              🎃 Zaterdag 31 oktober om {gekozenSlot}
             </p>
 
             <form className="reserveren-form" onSubmit={handleSubmit}>
