@@ -10,7 +10,8 @@ import {
 import { signInAnonymously } from "firebase/auth";
 import { db, auth } from "../firebase";
 
-const MAX_PER_SLOT = 5;
+const MAX_PER_SLOT = 6;
+const DATUM = "2026-10-31";
 
 const TIJDSLOTEN = [];
 for (let h = 9; h < 16; h++) {
@@ -18,18 +19,11 @@ for (let h = 9; h < 16; h++) {
   TIJDSLOTEN.push(`${String(h).padStart(2, "0")}:30`);
 }
 
-function isClosedDay(dateString) {
-  const day = new Date(dateString).getDay();
-  return day === 0 || day === 1;
-}
-
-function slotDocId(datum, tijd) {
-  return `${datum}_${tijd.replace(":", "-")}`;
+function slotDocId(tijd) {
+  return `${DATUM}_${tijd.replace(":", "-")}`;
 }
 
 export default function HalloweenReserveren() {
-  const [datum, setDatum] = useState("");
-  const [dateError, setDateError] = useState("");
   const [bezetting, setBezetting] = useState({});
   const [gekozenSlot, setGekozenSlot] = useState(null);
   const [formData, setFormData] = useState({
@@ -42,16 +36,9 @@ export default function HalloweenReserveren() {
 
   useEffect(() => {
     signInAnonymously(auth).catch(() => {});
-  }, []);
-
-  useEffect(() => {
-    if (!datum || isClosedDay(datum)) {
-      setBezetting({});
-      return;
-    }
 
     const unsubscribes = TIJDSLOTEN.map((tijd) => {
-      const ref = doc(db, "reserveringen-slots", slotDocId(datum, tijd));
+      const ref = doc(db, "reserveringen-slots", slotDocId(tijd));
       return onSnapshot(ref, (snap) => {
         const count = snap.exists() ? snap.data().count : 0;
         setBezetting((prev) => ({ ...prev, [tijd]: count }));
@@ -59,18 +46,7 @@ export default function HalloweenReserveren() {
     });
 
     return () => unsubscribes.forEach((u) => u());
-  }, [datum]);
-
-  const handleDatumChange = (e) => {
-    const val = e.target.value;
-    setDatum(val);
-    setGekozenSlot(null);
-    if (isClosedDay(val)) {
-      setDateError("Wij zijn gesloten op zondag en maandag.");
-    } else {
-      setDateError("");
-    }
-  };
+  }, []);
 
   const handleSlotKlik = (tijd) => {
     const bezet = bezetting[tijd] || 0;
@@ -84,12 +60,12 @@ export default function HalloweenReserveren() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!gekozenSlot || !datum) return;
+    if (!gekozenSlot) return;
 
     setBezig(true);
 
     try {
-      const ref = doc(db, "reserveringen-slots", slotDocId(datum, gekozenSlot));
+      const ref = doc(db, "reserveringen-slots", slotDocId(gekozenSlot));
       const snap = await getDoc(ref);
       const huidigCount = snap.exists() ? snap.data().count : 0;
 
@@ -108,7 +84,7 @@ export default function HalloweenReserveren() {
         {
           naam: formData.naam,
           email: formData.email,
-          datum,
+          datum: "31 oktober 2026",
           tijd: gekozenSlot,
           personen: formData.personen,
           opmerking: formData.opmerking,
@@ -147,64 +123,46 @@ export default function HalloweenReserveren() {
 
       <section className="reserveren-section">
         <div className="reserveren-card">
-          <h2>Kies een datum</h2>
-          <div className="form-group" style={{ maxWidth: 260 }}>
-            <label>Datum</label>
-            <input
-              type="date"
-              value={datum}
-              onChange={handleDatumChange}
-              min={new Date().toISOString().split("T")[0]}
-            />
-            {dateError && (
-              <p style={{ color: "#d9534f", marginTop: "0.25rem", fontSize: "0.9rem" }}>
-                {dateError}
-              </p>
-            )}
+          <h2>🎃 Halloween — vrijdag 31 oktober</h2>
+          <p className="reserveren-intro">Kies een tijdslot en reserveer je plekje.</p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))",
+              gap: "10px",
+              marginTop: "0.75rem",
+            }}
+          >
+            {TIJDSLOTEN.map((tijd) => {
+              const vrij = vrijePlekken(tijd);
+              const vol = vrij === 0;
+              const gekozen = gekozenSlot === tijd;
+
+              return (
+                <button
+                  key={tijd}
+                  onClick={() => handleSlotKlik(tijd)}
+                  disabled={vol}
+                  style={{
+                    padding: "12px 8px",
+                    borderRadius: 8,
+                    border: gekozen ? "2px solid #8b5e3c" : "1px solid #ddd",
+                    background: vol ? "#f5f5f5" : gekozen ? "#fdf3eb" : "#fff",
+                    color: vol ? "#bbb" : "#333",
+                    cursor: vol ? "not-allowed" : "pointer",
+                    textAlign: "center",
+                    fontWeight: gekozen ? 700 : 400,
+                  }}
+                >
+                  <div style={{ fontSize: 16, fontWeight: 600 }}>{tijd}</div>
+                  <div style={{ fontSize: 12, marginTop: 4, color: vol ? "#bbb" : "#888" }}>
+                    {vol ? "Vol" : `${vrij} plek${vrij === 1 ? "" : "ken"} vrij`}
+                  </div>
+                </button>
+              );
+            })}
           </div>
-
-          {datum && !dateError && (
-            <>
-              <h3 style={{ marginTop: "1.5rem" }}>Kies een tijdslot</h3>
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))",
-                  gap: "10px",
-                  marginTop: "0.75rem",
-                }}
-              >
-                {TIJDSLOTEN.map((tijd) => {
-                  const vrij = vrijePlekken(tijd);
-                  const vol = vrij === 0;
-                  const gekozen = gekozenSlot === tijd;
-
-                  return (
-                    <button
-                      key={tijd}
-                      onClick={() => handleSlotKlik(tijd)}
-                      disabled={vol}
-                      style={{
-                        padding: "12px 8px",
-                        borderRadius: 8,
-                        border: gekozen ? "2px solid #8b5e3c" : "1px solid #ddd",
-                        background: vol ? "#f5f5f5" : gekozen ? "#fdf3eb" : "#fff",
-                        color: vol ? "#bbb" : "#333",
-                        cursor: vol ? "not-allowed" : "pointer",
-                        textAlign: "center",
-                        fontWeight: gekozen ? 700 : 400,
-                      }}
-                    >
-                      <div style={{ fontSize: 16, fontWeight: 600 }}>{tijd}</div>
-                      <div style={{ fontSize: 12, marginTop: 4, color: vol ? "#bbb" : "#888" }}>
-                        {vol ? "Vol" : `${vrij} plek${vrij === 1 ? "" : "ken"} vrij`}
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-            </>
-          )}
         </div>
       </section>
 
@@ -237,7 +195,7 @@ export default function HalloweenReserveren() {
           >
             <h2 style={{ marginTop: 0 }}>Reservering bevestigen</h2>
             <p style={{ color: "#666", marginBottom: 20 }}>
-              📅 {new Date(datum).toLocaleDateString("nl-NL", { weekday: "long", day: "numeric", month: "long" })} om {gekozenSlot}
+              🎃 Vrijdag 31 oktober om {gekozenSlot}
             </p>
 
             <form className="reserveren-form" onSubmit={handleSubmit}>
