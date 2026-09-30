@@ -10,6 +10,7 @@ import Evenementen from "./pages/Evenementen";
 import Reserveren from "./pages/Reserveren";
 import WijnReserveren from "./pages/wijnReserveren";
 import IndiaasReserveren from "./pages/indiaasReserveren";
+import HalloweenReserveren from "./pages/HalloweenReserveren";
 import Navbar from "./pages/Navbar";
 
 import "./App.css";
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/reserveren" element={<Reserveren />} />
         <Route path="/ethiopische-avond" element={<IndiaasReserveren />} />
         <Route path="/nazomer-hightea" element={<WijnReserveren />} />
+        <Route path="/halloween-reserveren" element={<HalloweenReserveren />} />
       </Routes>
     </BrowserRouter>
   );
