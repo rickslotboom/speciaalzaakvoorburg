@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
 
 export default function WijnReserveren() {
   const [formData, setFormData] = useState({
