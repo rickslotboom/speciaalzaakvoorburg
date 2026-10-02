@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\public",
-    "\\src"
+    "\\src",
+    "\\src\\pages"
   ],
+  "SelectedNode": "\\src\\pages\\wijnReserveren.js",
   "PreviewInSolutionExplorer": false
 }

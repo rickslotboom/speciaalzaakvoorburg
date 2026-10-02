@@ -149,6 +149,40 @@ export default function HomeMoederdag() {
         </div>
       </section>
 
+      {/* Section - Wijnproeverij uit Oostenrijk */}
+<section className="three-gs-section">
+  <div className="three-gs-image">
+    <img
+      src="/images/wijnavond-oostenrijk.jpg"
+      alt="Wijnproeverij uit Oostenrijk"
+      className="single-feature-image"
+    />
+  </div>
+  <div className="three-gs-content">
+    <div className="g-item">
+      <p>🍷 Wijnproeverij uit Oostenrijk</p>
+      <p>
+        Zondag 25 oktober om 16.00 uur ontvangen we Matthias en Nelly
+        Nittnaus van Winzerhaus Nittnaus uit Oostenrijk.
+      </p>
+      <p>
+        Proef bijzondere Oostenrijkse wijnen en hoor het verhaal achter
+        het familiebedrijf.
+      </p>
+      <p>€ 15,- per persoon</p>
+      <p>📍 De Speciaalzaak Voorburg</p>
+      <p>
+        <Link
+          to="/wijn-reserveren"
+          style={{ fontWeight: "bold", textDecoration: "underline" }}
+        >
+          Reserveer tijdig via onze website.
+        </Link>
+      </p>
+    </div>
+  </div>
+</section>
+
       {/* Contact Section */}
       <section className="contact-section">
         <div className="contact-content">

@@ -24,17 +24,17 @@ export default function WijnReserveren() {
         {
           naam: formData.naam,
           email: formData.email,
-          datum: "6 september - Nazomer High Tea",
-          tijd: "14:00",
+          datum: "25 oktober - Wijnproeverij uit Oostenrijk",
+          tijd: "16:00",
           personen: formData.personen,
           opmerking: formData.opmerking,
-          evenement: "Nazomer High Tea",
+          evenement: "Wijnproeverij uit Oostenrijk",
         },
         "CoLqh9mfvCXmBDyuJ"
       )
       .then(() => {
         alert(
-          "Bedankt! Je reservering voor de Nazomer High Tea is ontvangen. We bevestigen deze zo snel mogelijk per e-mail. "
+          "Bedankt! Je reservering voor de Wijnproeverij uit Oostenrijk is ontvangen. We bevestigen deze zo snel mogelijk per e-mail."
         );
 
         setFormData({
@@ -56,9 +56,11 @@ export default function WijnReserveren() {
       {/* Hero */}
       <section className="reserveren-hero">
         <div className="reserveren-overlay">
-          <h1>Nazomer High Tea</h1>
+          <h1>🍷 Wijnproeverij uit Oostenrijk</h1>
           <p>
-            Kom gezellig naar de nazomer High Tea bij De Speciaalzaak, op zondag 6 september.
+            Zondag 25 oktober om 16.00 uur ontvangen we Matthias en Nelly
+            Nittnaus van Winzerhaus Nittnaus uit Oostenrijk bij De
+            Speciaalzaak Voorburg.
           </p>
         </div>
       </section>
@@ -66,11 +68,14 @@ export default function WijnReserveren() {
       {/* Formulier */}
       <section className="reserveren-section">
         <div className="reserveren-card">
-          <h2>Reserveer voor de Nazomer High Tea</h2>
+          <h2>Reserveer voor de Wijnproeverij uit Oostenrijk</h2>
 
           <p className="reserveren-intro">
-            De High Tea vindt plaats op <strong>zondag 6 september</strong>.
-            Reserveer hieronder. Na je reserveringsaanvraag ontvang je van ons een e-mail met de betaalinformatie voor de aanbetaling.
+            Proef bijzondere Oostenrijkse wijnen en hoor het verhaal achter
+            het familiebedrijf Winzerhaus Nittnaus. De proeverij vindt
+            plaats op <strong>zondag 25 oktober om 16.00 uur</strong> bij De
+            Speciaalzaak Voorburg. Deelname kost <strong>€ 15,- per
+            persoon</strong>. Reserveer hieronder.
           </p>
 
           <form className="reserveren-form" onSubmit={handleSubmit}>
@@ -109,7 +114,7 @@ export default function WijnReserveren() {
                 type="number"
                 name="personen"
                 min="1"
-                placeholder="Bijv. 4"
+                placeholder="Bijv. 2"
                 value={formData.personen}
                 onChange={handleChange}
                 required
@@ -121,7 +126,7 @@ export default function WijnReserveren() {
               <label>Opmerking</label>
               <textarea
                 name="opmerking"
-                placeholder="Bijvoorbeeld dieetwensen, kinderwagen..."
+                placeholder="Bijvoorbeeld dieetwensen, allergieën..."
                 value={formData.opmerking}
                 onChange={handleChange}
                 rows="4"
@@ -129,7 +134,7 @@ export default function WijnReserveren() {
             </div>
 
             <button type="submit" className="reserveren-button">
-              Reserveer voor de Nazomer High Tea
+              Reserveer voor de Wijnproeverij uit Oostenrijk
             </button>
           </form>
         </div>
