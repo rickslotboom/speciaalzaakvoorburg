@@ -52,7 +52,7 @@ export default function HomeMoederdag() {
             </p>
             <p>
               <Link
-                to="/helloween-reserveren"
+                to="/halloween-reserveren"
                 style={{ fontWeight: "bold", textDecoration: "underline" }}
               >
                 Reserveer daarom vooraf via onze website en kies het tijdstip
