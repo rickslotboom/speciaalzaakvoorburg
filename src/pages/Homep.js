@@ -51,17 +51,16 @@ export default function HomeMoederdag() {
               ontspannen en gezellig.
             </p>
             <p>
-              Reserveer daarom vooraf via onze website en kies het tijdstip
-              dat het beste bij jullie past.
-            </p>
-            <p>
-              
-               <Link
+              <Link
                 to="/helloween-reserveren"
                 style={{ fontWeight: "bold", textDecoration: "underline" }}
               >
-                🎃🥞 Wij hebben er zin in. Tot Halloween bij De Speciaalzaak!
+                Reserveer daarom vooraf via onze website en kies het tijdstip
+               dat het beste bij jullie past.
               </Link>
+            </p>
+            <p>
+                🎃🥞 Wij hebben er zin in. Tot Halloween bij De Speciaalzaak!
             </p>
           </div>
         </div>
