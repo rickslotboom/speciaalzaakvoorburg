@@ -25,6 +25,89 @@ export default function HomeMoederdag() {
         }}
       />
 
+      {/* Section - Halloween Pannenkoekendag */}
+      <section className="three-gs-section">
+        <div className="three-gs-content">
+          <div className="g-item">
+            <p>🎃 Halloween Pannenkoekendag bij De Speciaalzaak 👻🥞</p>
+            <p>
+              Op zaterdag 31 oktober maken we er bij De Speciaalzaak een
+              gezellige Halloween Pannenkoekendag van!
+            </p>
+            <p>
+              Frank staat deze dag klaar om de lekkerste pannenkoeken te
+              bakken en natuurlijk krijgt De Speciaalzaak een vrolijk
+              griezelig Halloween-sfeertje.
+            </p>
+            <p>
+              Omdat we verwachten dat het gezellig druk wordt, werken we
+              deze dag alleen op reservering. Zo kunnen we de drukte goed
+              verdelen en voorkomen we lange wachttijden. Bij het reserveren
+              kies je een tijdstip, zodat we ervoor kunnen zorgen dat jouw
+              pannenkoek op tijd gebakken kan worden.
+            </p>
+            <p>
+              Zo houden we het voor onze gasten én onze medewerkers
+              ontspannen en gezellig.
+            </p>
+            <p>
+              Reserveer daarom vooraf via onze website en kies het tijdstip
+              dat het beste bij jullie past.
+            </p>
+            <p>
+              
+               <Link
+                to="/helloween-reserveren"
+                style={{ fontWeight: "bold", textDecoration: "underline" }}
+              >
+                🎃🥞 Wij hebben er zin in. Tot Halloween bij De Speciaalzaak!
+              </Link>
+            </p>
+          </div>
+        </div>
+        <div className="three-gs-image">
+          <img
+            src="/images/helloween.jpg"
+            alt="Halloween Pannenkoekendag"
+            className="single-feature-image"
+          />
+        </div>
+      </section>
+
+      {/* Section - Wijnproeverij uit Oostenrijk */}
+      <section className="three-gs-section">
+        <div className="three-gs-image">
+          <img
+            src="/images/wijnavond-oostenrijk.jpg"
+            alt="Wijnproeverij uit Oostenrijk"
+            className="single-feature-image"
+          />
+        </div>
+        <div className="three-gs-content">
+          <div className="g-item">
+            <p>🍷 Wijnproeverij uit Oostenrijk</p>
+            <p>
+              Zondag 25 oktober om 16.00 uur ontvangen we Matthias en Nelly
+              Nittnaus van Winzerhaus Nittnaus uit Oostenrijk.
+            </p>
+            <p>
+              Proef bijzondere Oostenrijkse wijnen en hoor het verhaal achter
+              het familiebedrijf.
+            </p>
+            <p>€ 15,- per persoon</p>
+            <p>📍 De Speciaalzaak Voorburg</p>
+            <p>
+              <Link
+                to="/wijn-reserveren"
+                style={{ fontWeight: "bold", textDecoration: "underline" }}
+              >
+                Reserveer tijdig via onze website.
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Section - Ethiopische Avond */}
       <section className="three-gs-section">
         <div className="three-gs-image">
@@ -75,37 +158,6 @@ export default function HomeMoederdag() {
       </section>
 
 
-      {/* Section - Turkse Avond */}
-      <section className="three-gs-section">
-        <div className="three-gs-image">
-          <img
-            src="/images/turks.jpg"
-            alt="Turkse Avond"
-            className="single-feature-image"
-          />
-        </div>
-        <div className="three-gs-content">
-          <div className="g-item">
-            <p>Onze themadiners zijn inmiddels erg geliefd.</p>
-            <p>
-              Geen professionele chefs, maar mensen die met liefde hun
-              traditionele familierecepten voor u bereiden. Authentieke
-              smaken, rechtstreeks uit hun eigen keuken.
-            </p>
-            <p>Dat maakt onze themadiners zo bijzonder en uniek.</p>
-            <p>
-              Tijdens de Turkse avond kookt de familie van Muhamed voor u en
-              neemt zij u mee op een culinaire reis door de Turkse keuken.
-            </p>
-            
-             <p style={{ textDecoration: "underline", fontWeight: "bold", color: "red" }}>
-              Uitverkocht!
-            </p>
-          </div>
-        </div>
-      </section>
-
-
       {/* Section - Pannenkoekmiddag */}
       <section className="three-gs-section">
         <div className="three-gs-content" style={{ position: "relative" }}>
@@ -149,40 +201,6 @@ export default function HomeMoederdag() {
           />
         </div>
       </section>
-
-      {/* Section - Wijnproeverij uit Oostenrijk */}
-<section className="three-gs-section">
-  <div className="three-gs-image">
-    <img
-      src="/images/wijnavond-oostenrijk.jpg"
-      alt="Wijnproeverij uit Oostenrijk"
-      className="single-feature-image"
-    />
-  </div>
-  <div className="three-gs-content">
-    <div className="g-item">
-      <p>🍷 Wijnproeverij uit Oostenrijk</p>
-      <p>
-        Zondag 25 oktober om 16.00 uur ontvangen we Matthias en Nelly
-        Nittnaus van Winzerhaus Nittnaus uit Oostenrijk.
-      </p>/
-      <p>
-        Proef bijzondere Oostenrijkse wijnen en hoor het verhaal achter
-        het familiebedrijf.
-      </p>
-      <p>€ 15,- per persoon</p>
-      <p>📍 De Speciaalzaak Voorburg</p>
-      <p>
-        <Link
-          to="/wijn-reserveren"
-          style={{ fontWeight: "bold", textDecoration: "underline" }}
-        >
-          Reserveer tijdig via onze website.
-        </Link>
-      </p>
-    </div>
-  </div>
-</section>
 
       {/* Contact Section */}
       <section className="contact-section">
