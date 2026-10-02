@@ -165,7 +165,7 @@ export default function HomeMoederdag() {
       <p>
         Zondag 25 oktober om 16.00 uur ontvangen we Matthias en Nelly
         Nittnaus van Winzerhaus Nittnaus uit Oostenrijk.
-      </p>
+      </p>/
       <p>
         Proef bijzondere Oostenrijkse wijnen en hoor het verhaal achter
         het familiebedrijf.
