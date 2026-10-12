@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-import {
-  doc,
-  getDoc,
-  setDoc,
-  increment,
-  onSnapshot,
-} from "firebase/firestore";
+import { doc, runTransaction, onSnapshot } from "firebase/firestore";
 import { signInAnonymously } from "firebase/auth";
 import { db, auth } from "../firebase";
 
+// Elke persoon neemt 1 plek in. Een tijdslot heeft MAX_PER_SLOT plekken.
 const MAX_PER_SLOT = 6;
 const DATUM = "2026-10-31";
 
@@ -26,10 +21,10 @@ function slotDocId(tijd) {
 export default function HalloweenReserveren() {
   const [bezetting, setBezetting] = useState({});
   const [gekozenSlot, setGekozenSlot] = useState(null);
+  const [personen, setPersonen] = useState(1);
   const [formData, setFormData] = useState({
     naam: "",
     email: "",
-    personen: "",
     opmerking: "",
   });
   const [bezig, setBezig] = useState(false);
@@ -48,9 +43,23 @@ export default function HalloweenReserveren() {
     return () => unsubscribes.forEach((u) => u());
   }, []);
 
+  const vrijePlekken = (tijd) =>
+    Math.max(0, MAX_PER_SLOT - (bezetting[tijd] || 0));
+
+  // Past het gekozen aantal personen nog in dit slot?
+  const pastInSlot = (tijd) => vrijePlekken(tijd) >= personen;
+
+  const handlePersonenChange = (e) => {
+    const waarde = parseInt(e.target.value, 10);
+    if (Number.isNaN(waarde)) {
+      setPersonen("");
+      return;
+    }
+    setPersonen(Math.min(Math.max(1, waarde), MAX_PER_SLOT));
+  };
+
   const handleSlotKlik = (tijd) => {
-    const bezet = bezetting[tijd] || 0;
-    if (bezet >= MAX_PER_SLOT) return;
+    if (!personen || !pastInSlot(tijd)) return;
     setGekozenSlot(tijd);
   };
 
@@ -60,23 +69,25 @@ export default function HalloweenReserveren() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!gekozenSlot) return;
+    if (!gekozenSlot || !personen) return;
 
     setBezig(true);
 
     try {
       const ref = doc(db, "reserveringen-slots", slotDocId(gekozenSlot));
-      const snap = await getDoc(ref);
-      const huidigCount = snap.exists() ? snap.data().count : 0;
 
-      if (huidigCount >= MAX_PER_SLOT) {
-        alert("Dit tijdslot is net volgeraakt. Kies een ander tijdslot.");
-        setGekozenSlot(null);
-        setBezig(false);
-        return;
-      }
+      // Transactie: check + ophogen gebeurt atomair, zodat twee gasten
+      // tegelijk het slot niet over de limiet kunnen heen duwen.
+      await runTransaction(db, async (tx) => {
+        const snap = await tx.get(ref);
+        const huidigCount = snap.exists() ? snap.data().count : 0;
 
-      await setDoc(ref, { count: increment(1) }, { merge: true });
+        if (huidigCount + personen > MAX_PER_SLOT) {
+          throw new Error("SLOT_VOL");
+        }
+
+        tx.set(ref, { count: huidigCount + personen }, { merge: true });
+      });
 
       await emailjs.send(
         "service_c7dkrs8",
@@ -86,7 +97,7 @@ export default function HalloweenReserveren() {
           email: formData.email,
           datum: "31 oktober 2026",
           tijd: gekozenSlot,
-          personen: formData.personen,
+          personen: personen,
           opmerking: formData.opmerking,
         },
         "CoLqh9mfvCXmBDyuJ"
@@ -97,17 +108,22 @@ export default function HalloweenReserveren() {
       );
 
       setGekozenSlot(null);
-      setFormData({ naam: "", email: "", personen: "", opmerking: "" });
+      setPersonen(1);
+      setFormData({ naam: "", email: "", opmerking: "" });
     } catch (err) {
-      console.error("Fout bij reserveren:", err);
-      alert("Er ging iets mis. Probeer het later opnieuw.");
+      if (err.message === "SLOT_VOL") {
+        alert(
+          "Er zijn in dit tijdslot niet genoeg plekken meer voor jullie groep. Kies een ander tijdslot."
+        );
+        setGekozenSlot(null);
+      } else {
+        console.error("Fout bij reserveren:", err);
+        alert("Er ging iets mis. Probeer het later opnieuw.");
+      }
     }
 
     setBezig(false);
   };
-
-  const vrijePlekken = (tijd) =>
-    Math.max(0, MAX_PER_SLOT - (bezetting[tijd] || 0));
 
   return (
     <div className="reserveren-page">
@@ -124,7 +140,22 @@ export default function HalloweenReserveren() {
       <section className="reserveren-section">
         <div className="reserveren-card">
           <h2>🎃 Halloween — zaterdag 31 oktober</h2>
-          <p className="reserveren-intro">Kies een tijdslot en reserveer je plekje.</p>
+          <p className="reserveren-intro">
+            Kies eerst met hoeveel personen jullie komen en daarna een
+            tijdslot. Elke persoon neemt één plek in het tijdslot in. Er zijn
+            per tijdslot {MAX_PER_SLOT} plekken. Met een grotere groep? Mail ons dan op ria@speciaalzaakvoorburg.nl
+          </p>
+
+          <div className="form-group" style={{ maxWidth: 200, marginBottom: 16 }}>
+            <label>Aantal personen</label>
+            <input
+              type="number"
+              min="1"
+              max={MAX_PER_SLOT}
+              value={personen}
+              onChange={handlePersonenChange}
+            />
+          </div>
 
           <div
             style={{
@@ -137,27 +168,35 @@ export default function HalloweenReserveren() {
             {TIJDSLOTEN.map((tijd) => {
               const vrij = vrijePlekken(tijd);
               const vol = vrij === 0;
+              const past = !!personen && vrij >= personen;
+              const uit = !past;
               const gekozen = gekozenSlot === tijd;
+
+              let label;
+              if (vol) label = "Vol";
+              else if (!past) label = `Nog ${vrij} vrij`;
+              else label = `${vrij} plek${vrij === 1 ? "" : "ken"} vrij`;
 
               return (
                 <button
                   key={tijd}
+                  type="button"
                   onClick={() => handleSlotKlik(tijd)}
-                  disabled={vol}
+                  disabled={uit}
                   style={{
                     padding: "12px 8px",
                     borderRadius: 8,
                     border: gekozen ? "2px solid #8b5e3c" : "1px solid #ddd",
-                    background: vol ? "#f5f5f5" : gekozen ? "#fdf3eb" : "#fff",
-                    color: vol ? "#bbb" : "#333",
-                    cursor: vol ? "not-allowed" : "pointer",
+                    background: uit ? "#f5f5f5" : gekozen ? "#fdf3eb" : "#fff",
+                    color: uit ? "#bbb" : "#333",
+                    cursor: uit ? "not-allowed" : "pointer",
                     textAlign: "center",
                     fontWeight: gekozen ? 700 : 400,
                   }}
                 >
                   <div style={{ fontSize: 16, fontWeight: 600 }}>{tijd}</div>
-                  <div style={{ fontSize: 12, marginTop: 4, color: vol ? "#bbb" : "#888" }}>
-                    {vol ? "Vol" : `${vrij} plek${vrij === 1 ? "" : "ken"} vrij`}
+                  <div style={{ fontSize: 12, marginTop: 4, color: uit ? "#bbb" : "#888" }}>
+                    {label}
                   </div>
                 </button>
               );
@@ -195,7 +234,8 @@ export default function HalloweenReserveren() {
           >
             <h2 style={{ marginTop: 0 }}>Reservering bevestigen</h2>
             <p style={{ color: "#666", marginBottom: 20 }}>
-              🎃 Zaterdag 31 oktober om {gekozenSlot}
+              🎃 Zaterdag 31 oktober om {gekozenSlot} — {personen}{" "}
+              {personen === 1 ? "persoon" : "personen"}
             </p>
 
             <form className="reserveren-form" onSubmit={handleSubmit}>
@@ -222,19 +262,6 @@ export default function HalloweenReserveren() {
                     required
                   />
                 </div>
-              </div>
-
-              <div className="form-group">
-                <label>Aantal personen</label>
-                <input
-                  type="number"
-                  name="personen"
-                  min="1"
-                  placeholder="Bijv. 4"
-                  value={formData.personen}
-                  onChange={handleChange}
-                  required
-                />
               </div>
 
               <div className="form-group full-width">
