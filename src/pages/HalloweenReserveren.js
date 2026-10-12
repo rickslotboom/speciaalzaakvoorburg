@@ -143,7 +143,8 @@ export default function HalloweenReserveren() {
           <p className="reserveren-intro">
             Kies eerst met hoeveel personen jullie komen en daarna een
             tijdslot. Elke persoon neemt één plek in het tijdslot in. Er zijn
-            per tijdslot {MAX_PER_SLOT} plekken. Met een grotere groep? Mail ons dan op ria@speciaalzaakvoorburg.nl
+            per tijdslot {MAX_PER_SLOT} plekken. Met een grotere groep? Bel
+            ons dan even op 070 331 6169.
           </p>
 
           <div className="form-group" style={{ maxWidth: 200, marginBottom: 16 }}>
@@ -262,6 +263,36 @@ export default function HalloweenReserveren() {
                     required
                   />
                 </div>
+              </div>
+
+              <div className="form-group">
+                <label>Aantal personen</label>
+                <input
+                  type="number"
+                  min="1"
+                  max={Math.min(MAX_PER_SLOT, vrijePlekken(gekozenSlot))}
+                  placeholder="Bijv. 4"
+                  value={personen}
+                  onChange={(e) => {
+                    const waarde = parseInt(e.target.value, 10);
+                    if (Number.isNaN(waarde)) {
+                      setPersonen("");
+                      return;
+                    }
+                    setPersonen(
+                      Math.min(
+                        Math.max(1, waarde),
+                        vrijePlekken(gekozenSlot)
+                      )
+                    );
+                  }}
+                  required
+                />
+                <small style={{ color: "#888" }}>
+                  Nog {vrijePlekken(gekozenSlot)} plek
+                  {vrijePlekken(gekozenSlot) === 1 ? "" : "ken"} vrij in dit
+                  tijdslot
+                </small>
               </div>
 
               <div className="form-group full-width">
