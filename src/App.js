@@ -24,6 +24,7 @@ export default function App() {
         <Route path="/taarten" element={<Taarten />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menuspring" element={<MenuSpring />} />
+        <Route path="/menuwinter" element={<MenuWinter />} />
         <Route path="/medewerkers" element={<Medewerkers/>} />
         <Route path="/medewerkers/:id" element={<MedewerkerDetail />} />
         <Route path="/evenementen" element={<Evenementen />} />
