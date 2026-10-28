@@ -4,6 +4,7 @@ import HomeMoederdag from "./pages/Homep";
 import Taarten from "./pages/Taarten";
 import Menu from "./pages/Menu";
 import MenuSpring from "./pages/MenuSpring";
+import MenuWinter from "./pages/MenuWinter
 import Medewerkers from "./pages/Medewerkers";
 import MedewerkerDetail from "./pages/MedewerkerDetail";
 import Evenementen from "./pages/Evenementen";
