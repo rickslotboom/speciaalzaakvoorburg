@@ -25,53 +25,7 @@ export default function HomeMoederdag() {
         }}
       />
 
-      {/* Section - Halloween Pannenkoekendag */}
-      <section className="three-gs-section">
-        <div className="three-gs-content">
-          <div className="g-item">
-            <p>🎃 Halloween Pannenkoekendag bij De Speciaalzaak 👻🥞</p>
-            <p>
-              Op zaterdag 31 oktober maken we er bij De Speciaalzaak een
-              gezellige Halloween Pannenkoekendag van!
-            </p>
-            <p>
-              Frank staat deze dag klaar om de lekkerste pannenkoeken te
-              bakken en natuurlijk krijgt De Speciaalzaak een vrolijk
-              griezelig Halloween-sfeertje.
-            </p>
-            <p>
-              Omdat we verwachten dat het gezellig druk wordt, werken we
-              deze dag alleen op reservering. Zo kunnen we de drukte goed
-              verdelen en voorkomen we lange wachttijden. Bij het reserveren
-              kies je een tijdstip, zodat we ervoor kunnen zorgen dat jouw
-              pannenkoek op tijd gebakken kan worden.
-            </p>
-            <p>
-              Zo houden we het voor onze gasten én onze medewerkers
-              ontspannen en gezellig.
-            </p>
-            <p>
-              <Link
-                to="/halloween-reserveren"
-                style={{ fontWeight: "bold", textDecoration: "underline" }}
-              >
-                Reserveer daarom vooraf via onze website en kies het tijdstip
-               dat het beste bij jullie past.
-              </Link>
-            </p>
-            <p>
-                🎃🥞 Wij hebben er zin in. Tot Halloween bij De Speciaalzaak!
-            </p>
-          </div>
-        </div>
-        <div className="three-gs-image">
-          <img
-            src="/images/helloween.jpg"
-            alt="Halloween Pannenkoekendag"
-            className="single-feature-image"
-          />
-        </div>
-      </section>
+     
 
       {/* Section - Ethiopische Avond */}
       <section className="three-gs-section">
