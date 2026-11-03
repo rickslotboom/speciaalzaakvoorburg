@@ -11,6 +11,7 @@ import Evenementen from "./pages/Evenementen";
 import Reserveren from "./pages/Reserveren";
 import WijnReserveren from "./pages/wijnReserveren";
 import IndiaasReserveren from "./pages/indiaasReserveren";
+import ModeReserveren from "./pages/ModeReserveren";
 import HalloweenReserveren from "./pages/HalloweenReserveren";
 import Navbar from "./pages/Navbar";
 
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/ethiopische-avond" element={<IndiaasReserveren />} />
         <Route path="/halloween-reserveren" element={<HalloweenReserveren />} />
         <Route path="/wijn-reserveren" element={<WijnReserveren />} />
+        <Route path="/mode-reserveren" element={<ModeReserveren />} />
       </Routes>
     </BrowserRouter>
   );
