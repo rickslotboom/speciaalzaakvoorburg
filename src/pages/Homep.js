@@ -24,7 +24,57 @@ export default function HomeMoederdag() {
         }}
       />
 
-     
+           {/* Section - Kids Modeshow */}
+      <section className="three-gs-section">
+        <div className="three-gs-content">
+          <div className="g-item">
+            <h2>Kids Modeshow bij De Speciaalzaak! ✨</h2>
+
+            <p>
+              Op vrijdag 13 november showen de modellen van Ohana Boutique
+              de nieuwste kidscollectie bij De Speciaalzaak. Kom gezellig
+              kijken en ontdek de leukste outfits! Tijdens de show worden
+              er ook leuke prijzen verloot. 💛
+            </p>
+
+            <p>
+              Je bent welkom vanaf 16.00 uur. De modeshow begint om
+              16.45 uur.
+            </p>
+
+            <p>
+              Reserveren kan via de website of door de QR-code op de flyer
+              te scannen. We zien je graag! 👗🎉
+            </p>
+
+            <a
+              href="https://speciaalzaakvoorburg.nl/mode-reserveren"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: "inline-block",
+                marginTop: "10px",
+                padding: "12px 24px",
+                backgroundColor: "#d4a85c",
+                color: "white",
+                textDecoration: "none",
+                borderRadius: "6px",
+                fontWeight: "bold",
+              }}
+            >
+              Reserveer hier
+            </a>
+          </div>
+        </div>
+
+        <div className="three-gs-image">
+          <img
+            src="/images/kidsmodeshow.jpg"
+            alt="Kids Modeshow bij De Speciaalzaak"
+            className="single-feature-image"
+          />
+        </div>
+      </section>
 
       {/* Section - Ethiopische Avond */}
       <section className="three-gs-section">
